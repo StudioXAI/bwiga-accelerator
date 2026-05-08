@@ -1,0 +1,13 @@
+{
+  "name": "bwiga-accelerator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BWiGA Accelerator — premium Web3 & iGaming startup accelerator (static site + Vercel API).",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "echo 'No dev server needed — open index.html, or use `vercel dev` for the API routes.' && exit 0"
+  },
+  "license": "UNLICENSED"
+}

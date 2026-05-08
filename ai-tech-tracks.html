@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ===== SEO ===== -->
+<title>AI Tech Tracks — BWiGA Accelerator | AI-Native Founders, Web3 Market Infrastructure</title>
+<meta name="description" content="AI-native project tracks for founders building at the intersection of intelligence, automation, payments, infrastructure, finance and Web3 market systems. Five tracks, one market activation path." />
+<meta name="keywords" content="AI accelerator tracks, AI agents payments, AI DePIN, AI RWA, AI infrastructure, autonomous agents, machine-to-machine payments, stablecoin automation, AI Web3, AI market automation" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="author" content="BWiGA Accelerator" />
+<meta name="language" content="English" />
+<link rel="canonical" href="https://bwiga-accelerator.vercel.app/ai-tech-tracks.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bwiga-accelerator.vercel.app/ai-tech-tracks.html" />
+<meta property="og:title" content="AI Tech Tracks — BWiGA Accelerator" />
+<meta property="og:description" content="Accelerating AI-native founders with Web3 market infrastructure. AI Agents, DePIN, RWA, Trust & Security, Market Automation." />
+<meta property="og:image" content="https://bwiga-accelerator.vercel.app/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="BWiGA Accelerator — From idea to market activation" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="BWiGA Accelerator" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content="https://bwiga-accelerator.vercel.app/ai-tech-tracks.html" />
+<meta name="twitter:title" content="AI Tech Tracks — BWiGA Accelerator" />
+<meta name="twitter:description" content="Accelerating AI-native founders with Web3 market infrastructure. AI Agents, DePIN, RWA, Trust & Security, Market Automation." />
+<meta name="twitter:image" content="https://bwiga-accelerator.vercel.app/assets/og-image.png" />
+
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+
+<meta name="theme-color" content="#030508" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "AI Tech Tracks — BWiGA Accelerator",
+  "description": "AI-native project tracks for founders building at the intersection of intelligence, automation, payments, infrastructure, finance and Web3 market systems.",
+  "url": "https://bwiga-accelerator.vercel.app/ai-tech-tracks.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "BWiGA Accelerator",
+    "url": "https://bwiga-accelerator.vercel.app/"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="bg-stage" aria-hidden="true">
+  <canvas id="network-canvas"></canvas>
+  <div class="bg-grid"></div>
+  <div class="bg-vignette"></div>
+  <div class="bg-grain"></div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="BWiGA Accelerator home">
+      <span class="logo-mark"><img src="assets/logo.png" alt="BWiGA Accelerator" /></span>
+      <span class="logo-text">BWiGA</span>
+      <span class="logo-suffix">Accelerator</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <!-- Accelerator dropdown -->
+      <div class="nav-item has-dropdown">
+        <a href="index.html" class="nav-link" aria-haspopup="true">
+          Accelerator
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="mega-menu" role="menu">
+          <div class="mega-grid">
+            <div class="mega-intro">
+              <h4>BWiGA Accelerator</h4>
+              <p>A market activation accelerator for AI-native, Web3, fintech, RWA and DePIN founders preparing to launch, raise, list, gain visibility and build liquidity through protected market infrastructure.</p>
+              <a href="index.html" class="mega-cta">Explore Accelerator <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="mega-links">
+              <a href="index.html#what-is-accelerator" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>What is BWiGA Accelerator?</div><div class="mega-link-desc">A new accelerator model combining startup support, market infrastructure and protected market entry.</div></a>
+              <a href="index.html#how-it-works" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How It Works</div><div class="mega-link-desc">A clear journey from application to advisory, launch preparation and market activation.</div></a>
+              <a href="index.html#program-structure" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Program Structure</div><div class="mega-link-desc">Founder selection, strategy sprint, fundraising preparation, market rails and launch readiness.</div></a>
+              <a href="index.html#selection-criteria" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Selection Criteria</div><div class="mega-link-desc">What we look for in teams, products, token models, market potential, traction and fit.</div></a>
+              <a href="index.html#demo-day" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Demo Day</div><div class="mega-link-desc">Selected projects present to investors, partners and ecosystem participants.</div></a>
+              <a href="index.html#market-activation-thesis" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Market Activation Thesis</div><div class="mega-link-desc">Strong projects need structured launch, protected trading and visibility.</div></a>
+              <a href="index.html#faq" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>FAQ</div><div class="mega-link-desc">Key questions for founders, investors and ecosystem partners.</div></a>
+            </div>
+          </div>
+          <div class="mega-foot"><span>Ready to build the future?</span><a href="apply.html" class="mega-foot-cta">Apply Now <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+
+      <!-- For Founders dropdown -->
+      <div class="nav-item has-dropdown">
+        <a href="for-founders.html" class="nav-link" aria-haspopup="true">
+          For Founders
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="mega-menu" role="menu">
+          <div class="mega-grid">
+            <div class="mega-intro">
+              <h4>For founders who want more than advice.</h4>
+              <p>BWiGA Accelerator helps selected AI-native, Web3, fintech, RWA and DePIN projects prepare for fundraising, launch, protected market entry, visibility, investor access and liquidity activation.</p>
+              <a href="for-founders.html" class="mega-cta">Explore Founder Benefits <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="mega-links">
+              <a href="for-founders.html#founder-benefits" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Founder Benefits</div><div class="mega-link-desc">See what selected founders can access.</div></a>
+              <a href="for-founders.html#automated-fundraising" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Automated Fundraising</div><div class="mega-link-desc">Structured fundraising via Launchpad logic.</div></a>
+              <a href="for-founders.html#protected-market-entry" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Protected Market Entry</div><div class="mega-link-desc">Reduce harmful early-market behavior.</div></a>
+              <a href="for-founders.html#media-events" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Media &amp; Event Visibility</div><div class="mega-link-desc">Reach the right rooms at the right time.</div></a>
+              <a href="for-founders.html#investor-access" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Investor &amp; VC Access</div><div class="mega-link-desc">Curated investor conversations.</div></a>
+              <a href="for-founders.html#go-to-market" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Go-to-Market Support</div><div class="mega-link-desc">From visibility to adoption.</div></a>
+            </div>
+          </div>
+          <div class="mega-foot"><span>A strong project should not enter the market alone.</span><a href="apply.html" class="mega-foot-cta">Apply as a Founder <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+
+      <!-- Market Rails dropdown -->
+      <div class="nav-item has-dropdown">
+        <a href="market-rails.html" class="nav-link" aria-haspopup="true">
+          Market Rails
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="mega-menu" role="menu">
+          <div class="mega-grid">
+            <div class="mega-intro">
+              <h4>Market Rails</h4>
+              <p>Protocol-driven infrastructure for launch, listing, protected trading, liquidity activation and future cross-chain market expansion.</p>
+              <a href="market-rails.html" class="mega-cta">Explore Market Rails <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="mega-links">
+              <a href="market-rails.html#launchpad" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Launchpad</div><div class="mega-link-desc">Automated fundraising and launch execution where founders define the logic and the protocol executes.</div></a>
+              <a href="market-rails.html#cdex" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>CDEX</div><div class="mega-link-desc">A non-custodial trading environment where listing, trading and protection logic operate inside one system.</div></a>
+              <a href="market-rails.html#shield" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>SbSe Shield</div><div class="mega-link-desc">Protocol-level protection logic designed to reduce harmful manipulation, liquidity shocks and destructive early trading behavior.</div></a>
+              <a href="market-rails.html#invertx-liquidity" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>InvertX &amp; Liquidity Layer</div><div class="mega-link-desc">Future settlement and liquidity infrastructure designed to reduce fragmentation across chains and support market activation.</div></a>
+              <a href="market-rails.html#synthetic-rwa" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Synthetic RWA Direction</div><div class="mega-link-desc">Future market layer for tokenized representations of real-world value, built around protected markets and stable settlement logic.</div></a>
+            </div>
+          </div>
+          <div class="mega-foot"><span>Not just acceleration. Market infrastructure from launch to liquidity.</span><a href="apply.html" class="mega-foot-cta">Apply as a Founder <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+
+      <!-- Investors & Partners dropdown -->
+      <div class="nav-item has-dropdown">
+        <a href="investors.html" class="nav-link" aria-haspopup="true">
+          Investors &amp; Partners
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="mega-menu" role="menu">
+          <div class="mega-grid">
+            <div class="mega-intro">
+              <h4>Investors &amp; Ecosystem Partners</h4>
+              <p>Connect with selected AI x Web3 founders before market activation, or join the BWiGA Accelerator ecosystem as a strategic partner across capital, media, events, advisory, security and growth.</p>
+              <a href="investors.html" class="mega-cta">Explore Ecosystem <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="mega-links">
+              <a href="investors.html#investor-network" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Investor Network</div><div class="mega-link-desc">Curated network of angels, VCs, funds and strategic investors.</div></a>
+              <a href="investors.html#curated-deal-flow" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Curated Deal Flow</div><div class="mega-link-desc">Pre-vetted projects preparing for launch and market activation.</div></a>
+              <a href="investors.html#protected-market-thesis" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Protected Market Thesis</div><div class="mega-link-desc">Risk-aware market entry path.</div></a>
+              <a href="investors.html#ecosystem-partnerships" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Ecosystem Partnerships</div><div class="mega-link-desc">6 partner categories across the value chain.</div></a>
+              <a href="investors.html#join" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Join / Partner With Us</div><div class="mega-link-desc">Apply as an investor, partner, advisor or media partner.</div></a>
+            </div>
+          </div>
+          <div class="mega-foot"><span>Curated access. Stronger founders. Strategic ecosystem value.</span><a href="apply.html" class="mega-foot-cta">Join the Network <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+
+      <!-- AI Tech Tracks dropdown (active page) -->
+      <div class="nav-item has-dropdown">
+        <a href="ai-tech-tracks.html" class="nav-link active" aria-haspopup="true">
+          AI Tech Tracks
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="mega-menu" role="menu">
+          <div class="mega-grid">
+            <div class="mega-intro">
+              <h4>AI Tech Tracks</h4>
+              <p>AI-native project tracks for founders building at the intersection of intelligence, automation, payments, infrastructure, finance and Web3 market systems.</p>
+              <a href="ai-tech-tracks.html" class="mega-cta">Explore AI Tracks <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="mega-links">
+              <a href="#ai-agents-payments" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>AI Agents &amp; Payments</div><div class="mega-link-desc">Autonomous agents, agent wallets, AI commerce, stablecoin automation and machine-to-machine payments.</div></a>
+              <a href="#ai-infrastructure" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>AI Infrastructure &amp; DePIN</div><div class="mega-link-desc">Decentralized compute, GPU networks, inference, data infrastructure, storage and resource markets.</div></a>
+              <a href="#ai-infrastructure" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>AI &times; RWA &amp; Finance</div><div class="mega-link-desc">Tokenized assets, AI underwriting, treasury automation, synthetic RWA and programmable finance.</div></a>
+              <a href="#ai-infrastructure" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>AI Trust &amp; Security</div><div class="mega-link-desc">Agent identity, fraud detection, wallet risk scoring, smart contract monitoring and verification systems.</div></a>
+              <a href="#ai-infrastructure" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>AI Market Automation</div><div class="mega-link-desc">Trading intelligence, liquidity analytics, risk engines, investor dashboards and automated market tools.</div></a>
+              <a href="#apply" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Apply with an AI Project</div><div class="mega-link-desc">Submit your AI-native project for the accelerator.</div></a>
+            </div>
+          </div>
+          <div class="mega-foot"><span>AI creates intelligence. Web3 creates ownership and market access. BWiGA connects founders to the ecosystem.</span><a href="apply.html" class="mega-foot-cta">Apply with an AI Project <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+    </nav>
+
+    <a href="apply.html" class="apply-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5L3 22l5.5-1.5L21 8l-5-5z"/></svg>
+      Apply
+    </a>
+
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+<aside class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+  <a href="#why-ai-tracks">Why AI Tech Tracks <small>The thesis</small></a>
+  <a href="#tracks">AI Track Categories <small>5 tracks overview</small></a>
+  <a href="#ai-agents-payments">AI Agents &amp; Payments <small>Deep dive</small></a>
+  <a href="#ai-infrastructure">AI Infrastructure, RWA &amp; Markets <small>4 tracks combined</small></a>
+  <a href="#apply">Apply with an AI Project <small>Application checklist</small></a>
+  <a href="index.html">Accelerator</a>
+  <a href="for-founders.html">For Founders</a>
+  <a href="investors.html">Investors &amp; Partners</a>
+  <a href="apply.html" class="apply-btn">Apply Now</a>
+</aside>
+
+<main class="container" id="top">
+
+  <!-- ===== Section 1 — Hero ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-eyebrow">AI Tech Tracks</div>
+      <h1>
+        Accelerating AI-native founders<br />
+        with <span class="accent">Web3 market infrastructure.</span>
+      </h1>
+      <p class="hero-sub">
+        BWiGA Accelerator supports selected founders building at the intersection of AI, Web3, fintech, RWA, DePIN, payments, security and autonomous market systems.
+      </p>
+      <p class="hero-supporting">
+        The next wave of innovation will not be only AI or only Web3. It will be intelligent, programmable, automated and connected to real financial activity. BWiGA helps selected AI-native projects prepare for launch, investor access, liquidity, visibility and protected market activation.
+      </p>
+
+      <div class="cta-row">
+        <a href="apply.html#ai" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5L3 22l5.5-1.5L21 8l-5-5z"/></svg>
+          Apply with an AI Project
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#tracks" class="btn btn-secondary">Explore AI Tracks</a>
+      </div>
+
+      <!-- Highlight tagline -->
+      <div class="highlight-box reveal" style="max-width: 720px; margin: 48px auto 0;">
+        <div class="highlight-box-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        </div>
+        <p><strong>AI creates intelligence.</strong> Web3 creates ownership, settlement and market access. BWiGA connects founders to the people, platforms and partners around it.</p>
+      </div>
+
+      <!-- Mini-benefit row -->
+      <div class="compact-benefits reveal" style="margin-top: 48px;">
+        <div class="compact-item">
+          <div class="compact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <h6>AI-Native Focus</h6>
+        </div>
+        <div class="compact-item">
+          <div class="compact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h6>Web3 Integration</h6>
+        </div>
+        <div class="compact-item">
+          <div class="compact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg></div>
+          <h6>Market Infrastructure</h6>
+        </div>
+        <div class="compact-item">
+          <div class="compact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75M2 21v-2a4 4 0 014-4h6a4 4 0 014 4v2"/></svg></div>
+          <h6>Investor Access</h6>
+        </div>
+        <div class="compact-item">
+          <div class="compact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20M2 12h20"/></svg></div>
+          <h6>Global Ecosystem</h6>
+        </div>
+        <div class="compact-item">
+          <div class="compact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <h6>Real Impact</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Section 2 — Why AI Tech Tracks ===== -->
+  <section id="why-ai-tracks">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">01 · The thesis</div>
+        <h2>Why AI Tech Tracks</h2>
+        <div class="section-subtitle">The real opportunity is not AI as a feature. It is AI connected to markets.</div>
+        <p class="section-desc">
+          AI is moving from content and chat toward agents, automation, financial decision support, infrastructure, risk analysis and autonomous workflows.
+        </p>
+        <p class="section-desc">
+          At the same time, Web3 provides the rails for ownership, settlement, liquidity, tokenization, incentives and transparent market activity.
+        </p>
+        <p class="section-desc">
+          BWiGA Accelerator is built for founders who understand this convergence and are building systems that can connect intelligence with market infrastructure.
+        </p>
+      </div>
+
+      <div class="pillar-grid reveal">
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><line x1="12" y1="1" x2="12" y2="23"/></svg></div>
+          <h3>Agents Need Payments</h3>
+          <p>Autonomous systems need wallets, permissions, settlement, micropayments and transaction logic.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+          <h3>AI Needs Infrastructure</h3>
+          <p>Compute, data, storage, inference and decentralized resource networks are becoming core AI layers.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg></div>
+          <h3>Finance Needs Automation</h3>
+          <p>AI can support underwriting, risk, treasury, trading intelligence and market monitoring.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <h3>Markets Need Trust</h3>
+          <p>AI-native systems require identity, verification, fraud detection, security and compliance logic.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 3v18"/></svg></div>
+          <h3>Tokenization Needs Intelligence</h3>
+          <p>RWA and synthetic asset markets can benefit from AI-driven analysis, monitoring and automation.</p>
+        </div>
+      </div>
+
+      <div class="strong-line reveal">The future is not AI alone. It is AI connected to programmable markets.</div>
+    </div>
+  </section>
+
+  <!-- ===== Section 3 — AI Track Categories ===== -->
+  <section id="tracks">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">02 · The tracks</div>
+        <h2>AI-native tracks we support</h2>
+        <div class="section-subtitle">Five categories. One market activation path.</div>
+        <p class="section-desc">
+          BWiGA Accelerator supports AI-native projects that can connect to <strong>payments, infrastructure, finance, security, liquidity, settlement or market automation</strong>.
+        </p>
+      </div>
+
+      <div class="program-grid reveal">
+        <div class="program-card">
+          <div class="program-num">01</div>
+          <h3>AI Agents &amp; Payments</h3>
+          <p>Autonomous agents, agent wallets, AI commerce, stablecoin automation and machine-to-machine payments.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-num">02</div>
+          <h3>AI Infrastructure &amp; DePIN</h3>
+          <p>Decentralized compute, GPU networks, inference marketplaces, AI data infrastructure and resource networks.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-num">03</div>
+          <h3>AI &times; RWA &amp; Finance</h3>
+          <p>Tokenized assets, AI underwriting, treasury automation, synthetic RWA and programmable finance.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-num">04</div>
+          <h3>AI Trust &amp; Security</h3>
+          <p>Agent identity, fraud detection, wallet risk scoring, smart contract monitoring and verification systems.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-num">05</div>
+          <h3>AI Market Automation</h3>
+          <p>Trading intelligence, liquidity analytics, risk engines, investor dashboards and automated market tools.</p>
+        </div>
+      </div>
+
+      <div class="strong-line reveal">We are not looking for AI labels. We are looking for AI systems with market potential.</div>
+
+      <div class="cta-row reveal" style="margin-top: 40px; justify-content: center;">
+        <a href="#ai-agents-payments" class="btn btn-primary">
+          Explore AI Tracks
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Section 4 — AI Agents & Payments (deep dive) ===== -->
+  <section id="ai-agents-payments">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">03 · Deep dive</div>
+        <h2>AI Agents &amp; Payments</h2>
+        <div class="section-subtitle">When AI agents act, they will need to transact.</div>
+        <p class="section-desc">
+          AI agents are evolving from assistants into autonomous systems that can search, negotiate, subscribe, purchase, invoice, pay for APIs, access services and interact with digital markets. To act in the real economy, they need <strong>payment rails, wallet logic, permissions, settlement and trust infrastructure</strong>.
+        </p>
+      </div>
+
+      <div class="demo-grid reveal">
+        <div class="demo-card">
+          <div class="demo-card-num">PROJECT TYPE 01</div>
+          <h4>Agent Wallets</h4>
+          <p>Wallet infrastructure designed for AI agents, permissions, user control and transaction automation.</p>
+        </div>
+        <div class="demo-card">
+          <div class="demo-card-num">PROJECT TYPE 02</div>
+          <h4>AI Commerce</h4>
+          <p>Tools enabling AI agents to buy, sell, subscribe or transact on behalf of users or businesses.</p>
+        </div>
+        <div class="demo-card">
+          <div class="demo-card-num">PROJECT TYPE 03</div>
+          <h4>Machine-to-Machine Payments</h4>
+          <p>Payment systems for agents, APIs, bots, services, devices and automated workflows.</p>
+        </div>
+        <div class="demo-card">
+          <div class="demo-card-num">PROJECT TYPE 04</div>
+          <h4>Stablecoin Automation</h4>
+          <p>Settlement tools using stable-value rails for instant, programmable and cross-border payments.</p>
+        </div>
+        <div class="demo-card">
+          <div class="demo-card-num">PROJECT TYPE 05</div>
+          <h4>AI SaaS Billing</h4>
+          <p>Usage-based billing and payment automation for AI tools, APIs, data services and software platforms.</p>
+        </div>
+      </div>
+
+      <!-- Market Connection box -->
+      <div class="highlight-box reveal" style="margin-top: 40px;">
+        <div class="highlight-box-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+        </div>
+        <p><strong>Market Connection.</strong> AI payment projects may naturally connect to Web3 settlement, wallet infrastructure, programmable finance, stable-value systems and autonomous transaction networks — including, where relevant, BWiGA's Technology Partner stack (INFI MultiChain).</p>
+      </div>
+
+      <div class="strong-line reveal">The agent economy will need more than intelligence. It will need rails for value movement.</div>
+    </div>
+  </section>
+
+  <!-- ===== Section 5 — AI Infrastructure, RWA & Market Systems ===== -->
+  <section id="ai-infrastructure">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">04 · The stack</div>
+        <h2>AI Infrastructure, RWA &amp; Market Systems</h2>
+        <div class="section-subtitle">Where intelligence meets real financial infrastructure.</div>
+        <p class="section-desc">
+          Beyond agents and payments, BWiGA Accelerator supports AI-native projects building the <strong>infrastructure, finance, trust and automation layers</strong> required for the next generation of markets.
+        </p>
+      </div>
+
+      <div class="program-grid reveal" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="program-card">
+          <div class="program-num">01 · Infrastructure</div>
+          <h3>AI Infrastructure &amp; DePIN</h3>
+          <p>For decentralized compute, GPU networks, inference marketplaces, data infrastructure, storage, hardware networks and edge compute.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-num">02 · Finance</div>
+          <h3>AI &times; RWA &amp; Finance</h3>
+          <p>For tokenized assets, AI underwriting, private credit, treasury systems, synthetic RWA models and programmable finance.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-num">03 · Trust</div>
+          <h3>AI Trust &amp; Security</h3>
+          <p>For fraud detection, agent identity, wallet risk scoring, smart contract monitoring, compliance automation and verifiable credentials.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-num">04 · Automation</div>
+          <h3>AI Market Automation</h3>
+          <p>For trading intelligence, liquidity analytics, risk engines, portfolio tools, investor dashboards and market monitoring.</p>
+        </div>
+      </div>
+
+      <div class="strong-line reveal">AI infrastructure is not only technical. It is economic infrastructure.</div>
+    </div>
+  </section>
+
+  <!-- ===== Section 6 — Apply with an AI Project ===== -->
+  <section id="apply">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">05 · The application</div>
+        <h2>Apply with an AI Project</h2>
+        <div class="section-subtitle">Building AI that can enter the market?</div>
+        <p class="section-desc">
+          If you are building an AI-native project with a connection to <strong>Web3, fintech, RWA, DePIN, payments, security, identity, settlement, liquidity or market infrastructure</strong>, apply to BWiGA Accelerator and show us what you are building.
+        </p>
+      </div>
+
+      <div class="section-head reveal" style="margin-top: 40px; margin-bottom: 32px;">
+        <div class="section-subtitle">What to prepare</div>
+      </div>
+
+      <div class="criteria-grid reveal">
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <h4>Project Overview</h4>
+          <p>What you are building, who it is for and why it matters.</p>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <h4>AI Component</h4>
+          <p>How AI is used in the product, workflow, infrastructure or decision layer.</p>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div>
+          <h4>Web3 / Market Connection</h4>
+          <p>How the project connects to payments, tokenization, settlement, liquidity, identity, compute, security or market activation.</p>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg></div>
+          <h4>Product Stage</h4>
+          <p>MVP, prototype, technical roadmap, demo, pilots, users or early traction.</p>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75M2 21v-2a4 4 0 014-4h6a4 4 0 014 4v2"/></svg></div>
+          <h4>Team</h4>
+          <p>Core team background, LinkedIn profiles and why you are the right team to build this.</p>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <h4>Funding / Launch Goals</h4>
+          <p>What support you need: funding, launch, investor access, market infrastructure, visibility or partnerships.</p>
+        </div>
+      </div>
+
+      <div class="strong-line reveal">AI builds intelligence. BWiGA helps turn it into market infrastructure.</div>
+
+      <div class="cta-row reveal" style="margin-top: 40px; justify-content: center;">
+        <a href="apply.html#ai" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5L3 22l5.5-1.5L21 8l-5-5z"/></svg>
+          Apply with an AI Project
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="mailto:mail@lead-volume.com?subject=BWiGA AI Tech Tracks Discussion" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Talk to BWiGA Accelerator
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== Footer (BWiGA spec) ===== -->
+<footer class="site-footer">
+
+  <!-- 1. Top CTA bar -->
+  <div class="footer-cta-bar">
+    <div class="wrap">
+      <div class="footer-cta-inner">
+        <div class="footer-cta-mark">
+          <img src="assets/logo.png" alt="" aria-hidden="true" />
+        </div>
+        <div class="footer-cta-text">
+          <h3>Ready to build with the BWiGA ecosystem?</h3>
+          <p>Apply as a founder, join as an investor or become part of the BWiGA Accelerator partner network.</p>
+        </div>
+        <div class="footer-cta-actions">
+          <a href="apply.html" class="btn btn-primary">
+            Apply Now
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="book-intro-call.html" class="btn btn-secondary">Book an Intro Call</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Main 5-column footer -->
+  <div class="footer-main">
+    <div class="wrap">
+      <div class="footer-grid">
+
+        <!-- Brand block -->
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="BWiGA Accelerator home">
+            <span class="logo-mark"><img src="assets/logo.png" alt="BWiGA Accelerator" /></span>
+            <span class="logo-text">BWiGA</span>
+            <span class="logo-suffix">Accelerator</span>
+          </a>
+          <p>Premium Web3 &amp; iGaming accelerator ecosystem for founders, investors and industry leaders.</p>
+          <div class="footer-strap">Capital. Visibility. Partners. Market access.</div>
+          <div class="footer-strap-2">Built for projects ready to scale beyond noise.</div>
+
+          <div class="footer-social" aria-label="Social channels">
+            <a href="#" aria-label="X / Twitter" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="#" aria-label="Telegram" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+            <a href="mailto:mail@lead-volume.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Explore -->
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="index.html">Accelerator</a></li>
+            <li><a href="market-rails.html">Market Rails</a></li>
+            <li><a href="for-founders.html">For Founders</a></li>
+            <li><a href="investors.html">Investors &amp; Partners</a></li>
+            <li><a href="ai-tech-tracks.html">AI Tech Tracks</a></li>
+          </ul>
+        </div>
+
+        <!-- Ecosystem -->
+        <div class="footer-col">
+          <h5>Ecosystem</h5>
+          <ul>
+            <li><a href="mentors-advisors.html">Mentors &amp; Advisors</a></li>
+            <li><a href="media-events.html">Media &amp; Events</a></li>
+            <li><a href="demo-day.html">Demo Day</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="upcoming-cohort.html">Upcoming Cohort</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="insights.html#market-readiness-thesis">Market Readiness Thesis</a></li>
+            <li><a href="insights.html#ai-web3-thesis">AI &times; Web3 Thesis</a></li>
+            <li><a href="resources.html">Founder Resources</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+          </ul>
+        </div>
+
+        <!-- Apply -->
+        <div class="footer-col">
+          <h5>Apply</h5>
+          <ul>
+            <li><a href="apply.html#founder">Apply as a Founder</a></li>
+            <li><a href="apply.html#partners">Join Investor Network</a></li>
+            <li><a href="apply.html#partners">Become a Partner</a></li>
+            <li><a href="apply.html#refer">Refer a Project</a></li>
+            <li><a href="book-intro-call.html">Book an Intro Call</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Risk note -->
+  <div class="wrap">
+    <div class="footer-risk">
+      BWiGA Accelerator does not provide financial, investment, legal, tax or regulatory advice. Nothing on this website guarantees acceptance, investment, fundraising, partnership, media access, event participation, listing, liquidity, returns or any specific outcome. All participation, investment and partnership decisions remain the sole responsibility of each participant. Technology partners — including INFI MultiChain (a fully decentralized ecosystem) — may support selected projects where relevant; they do not operate the accelerator.
+    </div>
+  </div>
+
+  <!-- 4. Legal bar -->
+  <div class="wrap">
+    <div class="footer-legal">
+      <div class="footer-legal-links">
+        <a href="legal-disclaimer.html">Legal Disclaimer</a>
+        <a href="risk-disclaimer.html">Risk Disclaimer</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-copyright">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>© 2026 BWiGA. BWiGA Accelerator. All rights reserved.</span>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<script src="script.js"></script>
+<script src="chat.js"></script>
+</body>
+</html>

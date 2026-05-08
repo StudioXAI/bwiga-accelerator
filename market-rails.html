@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ===== SEO ===== -->
+<title>Market Rails — BWiGA Accelerator | Launch, Listing, Trading & Liquidity Infrastructure</title>
+<meta name="description" content="Protocol-driven infrastructure for launch, listing, protected trading, liquidity activation and future cross-chain market expansion. Launchpad, CDEX, SbSe Shield, InvertX and Synthetic RWA — connected market rails." />
+<meta name="keywords" content="BWiGA Market Rails, INFI MultiChain Launchpad, CDEX, SbSe Shield, InvertX, Synthetic RWA, protected trading, liquidity infrastructure, cross-chain settlement, market activation" />
+<meta name="author" content="BWiGA Accelerator" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="language" content="English" />
+<link rel="canonical" href="https://bwiga-accelerator.vercel.app/market-rails.html" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bwiga-accelerator.vercel.app/market-rails.html" />
+<meta property="og:title" content="Market Rails — BWiGA Accelerator" />
+<meta property="og:description" content="Not just acceleration. Market infrastructure from launch to liquidity. Launchpad, CDEX, SbSe Shield, InvertX and Synthetic RWA." />
+<meta property="og:image" content="https://bwiga-accelerator.vercel.app/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="BWiGA Accelerator — From idea to market activation" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="BWiGA Accelerator" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content="https://bwiga-accelerator.vercel.app/market-rails.html" />
+<meta name="twitter:title" content="Market Rails — BWiGA Accelerator" />
+<meta name="twitter:description" content="Not just acceleration. Market infrastructure from launch to liquidity. Launchpad, CDEX, SbSe Shield, InvertX and Synthetic RWA." />
+<meta name="twitter:image" content="https://bwiga-accelerator.vercel.app/assets/og-image.png" />
+
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<meta name="theme-color" content="#030508" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Market Rails — BWiGA Accelerator",
+  "description": "Protocol-driven infrastructure for launch, listing, protected trading, liquidity activation and future cross-chain market expansion.",
+  "url": "https://bwiga-accelerator.vercel.app/market-rails.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "BWiGA Accelerator",
+    "url": "https://bwiga-accelerator.vercel.app/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bwiga-accelerator.vercel.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Market Rails", "item": "https://bwiga-accelerator.vercel.app/market-rails.html" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="bg-stage" aria-hidden="true">
+  <canvas id="network-canvas"></canvas>
+  <div class="bg-grid"></div>
+  <div class="bg-vignette"></div>
+  <div class="bg-grain"></div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="BWiGA Accelerator home">
+      <span class="logo-mark"><img src="assets/logo.png" alt="BWiGA Accelerator" /></span>
+      <span class="logo-text">BWiGA</span>
+      <span class="logo-suffix">Accelerator</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <!-- Accelerator dropdown -->
+      <div class="nav-item has-dropdown">
+        <a href="index.html" class="nav-link" aria-haspopup="true">
+          Accelerator
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="mega-menu" role="menu">
+          <div class="mega-grid">
+            <div class="mega-intro">
+              <h4>BWiGA Accelerator</h4>
+              <p>A market activation accelerator for AI-native, Web3, fintech, RWA and DePIN founders preparing to launch, raise, list, gain visibility and build liquidity through protected market infrastructure.</p>
+              <a href="index.html" class="mega-cta">Explore Accelerator <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="mega-links">
+              <a href="index.html#what-is-accelerator" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>What is BWiGA Accelerator?</div><div class="mega-link-desc">A new accelerator model combining startup support, market infrastructure and protected market entry.</div></a>
+              <a href="index.html#how-it-works" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How It Works</div><div class="mega-link-desc">A clear journey from application to advisory, launch preparation and market activation.</div></a>
+              <a href="index.html#program-structure" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Program Structure</div><div class="mega-link-desc">Founder selection, strategy sprint, fundraising preparation, market rails and launch readiness.</div></a>
+              <a href="index.html#selection-criteria" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Selection Criteria</div><div class="mega-link-desc">What we look for in teams, products, token models, market potential, traction and fit.</div></a>
+              <a href="index.html#demo-day" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Demo Day</div><div class="mega-link-desc">Selected projects present to investors, partners and ecosystem participants.</div></a>
+              <a href="index.html#market-activation-thesis" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Market Activation Thesis</div><div class="mega-link-desc">Strong projects need structured launch, protected trading and visibility.</div></a>
+              <a href="index.html#faq" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>FAQ</div><div class="mega-link-desc">Key questions for founders, investors and ecosystem partners.</div></a>
+            </div>
+          </div>
+          <div class="mega-foot"><span>Ready to build the future?</span><a href="apply.html" class="mega-foot-cta">Apply Now <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+
+      <!-- For Founders dropdown -->
+      <div class="nav-item has-dropdown">
+        <a href="for-founders.html" class="nav-link" aria-haspopup="true">
+          For Founders
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="mega-menu" role="menu">
+          <div class="mega-grid">
+            <div class="mega-intro">
+              <h4>For founders who want more than advice.</h4>
+              <p>BWiGA Accelerator helps selected AI-native, Web3, fintech, RWA and DePIN projects prepare for fundraising, launch, protected market entry, visibility, investor access and liquidity activation.</p>
+              <a href="for-founders.html" class="mega-cta">Explore Founder Benefits <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="mega-links">
+              <a href="for-founders.html#founder-benefits" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Founder Benefits</div><div class="mega-link-desc">See what selected founders can access.</div></a>
+              <a href="for-founders.html#automated-fundraising" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Automated Fundraising</div><div class="mega-link-desc">Structured fundraising via Launchpad logic.</div></a>
+              <a href="for-founders.html#protected-market-entry" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Protected Market Entry</div><div class="mega-link-desc">Reduce harmful early-market behavior.</div></a>
+              <a href="for-founders.html#media-events" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Media &amp; Event Visibility</div><div class="mega-link-desc">Reach the right rooms at the right time.</div></a>
+              <a href="for-founders.html#investor-access" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Investor &amp; VC Access</div><div class="mega-link-desc">Curated investor conversations.</div></a>
+              <a href="for-founders.html#go-to-market" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Go-to-Market Support</div><div class="mega-link-desc">From visibility to adoption.</div></a>
+            </div>
+          </div>
+          <div class="mega-foot"><span>A strong project should not enter the market alone.</span><a href="apply.html" class="mega-foot-cta">Apply as a Founder <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+
+      <!-- Market Rails dropdown (active page) -->
+      <div class="nav-item has-dropdown">
+        <a href="market-rails.html" class="nav-link active" aria-haspopup="true">
+          Market Rails
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="mega-menu" role="menu">
+          <div class="mega-grid">
+            <div class="mega-intro">
+              <h4>Market Rails</h4>
+              <p>Protocol-driven infrastructure for launch, listing, protected trading, liquidity activation and future cross-chain market expansion.</p>
+              <a href="market-rails.html" class="mega-cta">Explore Market Rails <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="mega-links">
+              <a href="#launchpad" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Launchpad</div><div class="mega-link-desc">Automated fundraising and launch execution where founders define the logic and the protocol executes.</div></a>
+              <a href="#cdex" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>CDEX</div><div class="mega-link-desc">A non-custodial trading environment where listing, trading and protection logic operate inside one system.</div></a>
+              <a href="#shield" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>SbSe Shield</div><div class="mega-link-desc">Protocol-level protection logic designed to reduce harmful manipulation, liquidity shocks and destructive early trading behavior.</div></a>
+              <a href="#invertx-liquidity" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>InvertX &amp; Liquidity Layer</div><div class="mega-link-desc">Future settlement and liquidity infrastructure designed to reduce fragmentation across chains and support market activation.</div></a>
+              <a href="#synthetic-rwa" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Synthetic RWA Direction</div><div class="mega-link-desc">Future market layer for tokenized representations of real-world value, built around protected markets and stable settlement logic.</div></a>
+            </div>
+          </div>
+          <div class="mega-foot"><span>Not just acceleration. Market infrastructure from launch to liquidity.</span><a href="apply.html" class="mega-foot-cta">Apply as a Founder <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+
+      <!-- Investors & Partners dropdown -->
+      <div class="nav-item has-dropdown">
+        <a href="investors.html" class="nav-link" aria-haspopup="true">
+          Investors &amp; Partners
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="mega-menu" role="menu">
+          <div class="mega-grid">
+            <div class="mega-intro">
+              <h4>Investors &amp; Ecosystem Partners</h4>
+              <p>Connect with selected AI x Web3 founders before market activation, or join the BWiGA Accelerator ecosystem as a strategic partner across capital, media, events, advisory, security and growth.</p>
+              <a href="investors.html" class="mega-cta">Explore Ecosystem <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="mega-links">
+              <a href="investors.html#investor-network" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Investor Network</div><div class="mega-link-desc">Curated network of angels, VCs, funds and strategic investors.</div></a>
+              <a href="investors.html#curated-deal-flow" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Curated Deal Flow</div><div class="mega-link-desc">Pre-vetted projects preparing for launch and market activation.</div></a>
+              <a href="investors.html#protected-market-thesis" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Protected Market Thesis</div><div class="mega-link-desc">Risk-aware market entry path.</div></a>
+              <a href="investors.html#ecosystem-partnerships" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Ecosystem Partnerships</div><div class="mega-link-desc">6 partner categories across the value chain.</div></a>
+              <a href="investors.html#join" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Join / Partner With Us</div><div class="mega-link-desc">Apply as an investor, partner, advisor or media partner.</div></a>
+            </div>
+          </div>
+          <div class="mega-foot"><span>Curated access. Stronger founders. Strategic ecosystem value.</span><a href="apply.html" class="mega-foot-cta">Join the Network <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+
+      <!-- AI Tech Tracks dropdown -->
+      <div class="nav-item has-dropdown">
+        <a href="ai-tech-tracks.html" class="nav-link" aria-haspopup="true">
+          AI Tech Tracks
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="mega-menu" role="menu">
+          <div class="mega-grid">
+            <div class="mega-intro">
+              <h4>AI Tech Tracks</h4>
+              <p>AI-native project tracks for founders building at the intersection of intelligence, automation, payments, infrastructure, finance and Web3 market systems.</p>
+              <a href="ai-tech-tracks.html" class="mega-cta">Explore AI Tracks <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="mega-links">
+              <a href="ai-tech-tracks.html#ai-agents-payments" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>AI Agents &amp; Payments</div><div class="mega-link-desc">Autonomous agents, agent wallets, AI commerce, stablecoin automation and machine-to-machine payments.</div></a>
+              <a href="ai-tech-tracks.html#ai-infrastructure" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>AI Infrastructure &amp; DePIN</div><div class="mega-link-desc">Decentralized compute, GPU networks, inference, data infrastructure, storage and resource markets.</div></a>
+              <a href="ai-tech-tracks.html#ai-infrastructure" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>AI &times; RWA &amp; Finance</div><div class="mega-link-desc">Tokenized assets, AI underwriting, treasury automation, synthetic RWA and programmable finance.</div></a>
+              <a href="ai-tech-tracks.html#ai-infrastructure" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>AI Trust &amp; Security</div><div class="mega-link-desc">Agent identity, fraud detection, wallet risk scoring, smart contract monitoring and verification systems.</div></a>
+              <a href="ai-tech-tracks.html#ai-infrastructure" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>AI Market Automation</div><div class="mega-link-desc">Trading intelligence, liquidity analytics, risk engines, investor dashboards and automated market tools.</div></a>
+              <a href="ai-tech-tracks.html#apply" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Apply with an AI Project</div><div class="mega-link-desc">Submit your AI-native project for the accelerator.</div></a>
+            </div>
+          </div>
+          <div class="mega-foot"><span>AI creates intelligence. Web3 creates ownership and market access. BWiGA connects founders to the ecosystem.</span><a href="apply.html" class="mega-foot-cta">Apply with an AI Project <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+    </nav>
+
+    <a href="apply.html" class="apply-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5L3 22l5.5-1.5L21 8l-5-5z"/></svg>
+      Apply
+    </a>
+
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+<aside class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+  <a href="#what-are-rails">What are Market Rails? <small>The infrastructure layer</small></a>
+  <a href="#launchpad">Launchpad <small>Automated launch execution</small></a>
+  <a href="#cdex">CDEX &amp; SbSe Shield <small>Protected trading</small></a>
+  <a href="#invertx-liquidity">InvertX &amp; Liquidity Layer <small>Cross-chain settlement</small></a>
+  <a href="#synthetic-rwa">Synthetic RWA Direction <small>Tokenized real-world value</small></a>
+  <a href="index.html">Accelerator</a>
+  <a href="for-founders.html">For Founders</a>
+  <a href="investors.html">Investors &amp; Partners</a>
+  <a href="ai-tech-tracks.html">AI Tech Tracks</a>
+  <a href="apply.html" class="apply-btn">Apply Now</a>
+</aside>
+
+<main class="container" id="top">
+
+  <!-- ===== Section 1 — Hero ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-eyebrow">Market Rails · Technology Partner: INFI MultiChain</div>
+      <h1>
+        Market infrastructure for<br />
+        <span class="accent">launch, listing, trading and liquidity.</span>
+      </h1>
+      <p class="hero-sub">
+        Through our Technology &amp; Market Rails Partner — <strong>INFI MultiChain (a fully decentralized ecosystem)</strong> — selected founders can connect automated fundraising, CDEX listing, protected trading, liquidity strategy and future cross-chain settlement into one structured path.
+      </p>
+      <p class="hero-supporting">
+        Most projects do not fail because they lack ideas. They fail at the critical moments of launch, listing and early liquidity. INFI MultiChain — fully decentralized — was built to solve this at infrastructure level. BWiGA Accelerator connects selected founders to it where relevant.
+      </p>
+
+      <div class="cta-row">
+        <a href="#what-are-rails" class="btn btn-primary">
+          Explore the Rails
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="apply.html#founder" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5L3 22l5.5-1.5L21 8l-5-5z"/></svg>
+          Apply as a Founder
+        </a>
+      </div>
+
+      <div class="highlight-box reveal" style="max-width: 640px; margin: 48px auto 0;">
+        <div class="highlight-box-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <p><strong>You define the logic.</strong> The protocol executes.</p>
+      </div>
+
+      <!-- Bottom flow cards: Launch → Listing → Trading → Liquidity -->
+      <div class="timeline flow-4 reveal" style="margin-top: 56px;">
+        <div class="timeline-track">
+          <div class="timeline-step">
+            <div class="timeline-num">01</div>
+            <h4>Launch</h4>
+            <p>Automated fundraising and launch execution.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-num">02</div>
+            <h4>Listing</h4>
+            <p>CDEX listing with built-in security and compliance rails.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-num">03</div>
+            <h4>Trading</h4>
+            <p>Protected trading environment with market integrity.</p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-num">04</div>
+            <h4>Liquidity</h4>
+            <p>Dynamic liquidity strategy and cross-chain settlement direction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Section 2 — What Are Market Rails? ===== -->
+  <section id="what-are-rails">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">01 · The infrastructure</div>
+        <h2>What are Market Rails?</h2>
+        <div class="section-subtitle">The infrastructure layer behind market activation.</div>
+        <p class="section-desc">
+          Market rails are the rules, systems and protocol logic that help a project move from fundraising to live market activity. In the BWiGA ecosystem, this means a connected path from <strong>launch to listing, from listing to protected trading, and from early trading to liquidity activation</strong>.
+        </p>
+        <p class="section-desc">
+          Instead of treating launch, listing and liquidity as separate problems, INFI MultiChain connects them into one structured infrastructure flow.
+        </p>
+      </div>
+
+      <div class="pillar-grid reveal">
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5L3 22l5.5-1.5L21 8l-5-5z"/></svg></div>
+          <h3>Launch</h3>
+          <p>Structured fundraising and launch execution through predefined protocol logic.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg></div>
+          <h3>Listing</h3>
+          <p>A path toward CDEX listing after launch and readiness conditions are met.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Trading</h3>
+          <p>Non-custodial trading supported by market protection logic.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <h3>Liquidity</h3>
+          <p>Liquidity floor, lock logic, future settlement layers and cross-chain liquidity direction.</p>
+        </div>
+      </div>
+
+      <div class="strong-line reveal">Launch is not the finish line. Market survival is.</div>
+    </div>
+  </section>
+
+  <!-- ===== Section 3 — Launchpad ===== -->
+  <section id="launchpad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">02 · Launchpad</div>
+        <h2>Launchpad</h2>
+        <div class="section-subtitle">Automated launch execution for serious projects.</div>
+        <p class="section-desc">
+          The INFI MultiChain Launchpad is designed to help projects launch with more structure, transparency and automation. Founders define the fundraising logic in advance — including <strong>price, timing, soft cap, hard cap and raise model</strong> — and the protocol executes the process.
+        </p>
+        <p class="section-desc">
+          The goal is to reduce manual dependency, remove hidden control and connect fundraising with market activation.
+        </p>
+      </div>
+
+      <div class="program-grid reveal">
+        <div class="program-card">
+          <div class="program-num">01 · Cost</div>
+          <h3>Zero Listing-Cost Direction</h3>
+          <p>BWiGA does not take money from serious projects at the starting line through traditional listing fees.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-num">02 · Simple</div>
+          <h3>Single-Stage Raise</h3>
+          <p>A simple, fast model with one price, one timeline and one clear fundraising structure.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-num">03 · Advanced</div>
+          <h3>Multi-Stage Raise</h3>
+          <p>A more advanced model with multiple pricing stages, allocations and structured capital logic.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-num">04 · Execution</div>
+          <h3>Protocol Execution</h3>
+          <p>Founders define the logic. The protocol executes the process without manual approvals or hidden override.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-num">05 · Continuation</div>
+          <h3>Market Continuation</h3>
+          <p>Fundraising is designed to move toward listing, trading and market activation, not stop at the raise.</p>
+        </div>
+      </div>
+
+      <div class="strong-line reveal">A launchpad should not only raise capital. It should prepare the market.</div>
+    </div>
+  </section>
+
+  <!-- ===== Section 4 — CDEX & SbSe Shield ===== -->
+  <section id="cdex">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">03 · Protected trading</div>
+        <h2>CDEX &amp; SbSe Shield</h2>
+        <div class="section-subtitle">Protected trading infrastructure for early market survival.</div>
+        <p class="section-desc">
+          The first phase after listing is often where strong projects lose momentum. Aggressive selling, weak liquidity, manipulation and panic can destroy trust before the project has time to grow.
+        </p>
+        <p class="section-desc">
+          INFI MultiChain <strong>CDEX</strong> is designed as a protected, non-custodial trading environment where listing, trading and protection logic operate inside one system. <strong>SbSe Shield</strong> adds protocol-level rules designed to reduce harmful manipulation, high liquidity impact and destructive early trading behavior.
+        </p>
+      </div>
+
+      <div id="shield" class="criteria-grid reveal">
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M12 22v-6M2 12h6M22 12h-6"/><circle cx="12" cy="12" r="4"/></svg></div>
+          <h4>Liquidity Floor</h4>
+          <p>The Soft Cap can define the minimum liquidity percentage that becomes part of the CDEX listing liquidity.</p>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+          <h4>Minimum 3-Month Liquidity Lock</h4>
+          <p>Listing liquidity is locked at protocol level for a minimum of 3 months to support stronger early-market trust.</p>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h4>SbSe Shield</h4>
+          <p>High-impact selling can trigger progressive protection fees designed to reduce destructive market pressure.</p>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l3 3"/></svg></div>
+          <h4>Compensation Logic</h4>
+          <p>Protection fees can support compensation mechanisms for affected users, helping keep value inside the market ecosystem.</p>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6M16 12h-4"/></svg></div>
+          <h4>DAO-Controlled Unlock</h4>
+          <p>Future liquidity unlocks can be governed by DAO approval instead of hidden manual control.</p>
+        </div>
+      </div>
+
+      <div class="strong-line reveal">Trust is not promised after the damage. It is enforced by protocol rules before the market breaks.</div>
+    </div>
+  </section>
+
+  <!-- ===== Section 5 — InvertX & Liquidity Layer ===== -->
+  <section id="invertx-liquidity">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">04 · Future liquidity</div>
+        <h2>InvertX &amp; Liquidity Layer</h2>
+        <div class="section-subtitle">Toward unified liquidity and settlement across chains.</div>
+        <p class="section-desc">
+          <strong>InvertX</strong> is being developed as a Stable Digital Protocol Unit Asset inside the BWiGA ecosystem. Its purpose is to support future cross-chain settlement, liquidity coordination and market activity — without relying on classic stablecoin mechanics, centralized issuer logic or fragmented liquidity across chains.
+        </p>
+        <p class="section-desc">
+          Together with the future Liquidity Lending layer, the goal is to help projects access starting liquidity, reduce liquidity fragmentation and grow into real market demand through user activity.
+        </p>
+      </div>
+
+      <div class="program-grid reveal">
+        <div class="program-card">
+          <div class="program-num">01 · Stable Unit</div>
+          <h3>Stable Digital Protocol Unit</h3>
+          <p>InvertX is designed as a protocol-native unit for settlement and liquidity coordination, not as a traditional stablecoin.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-num">02 · Direction</div>
+          <h3>Cross-Chain Liquidity Direction</h3>
+          <p>The goal is to reduce fragmented liquidity across chains and support one connected market layer.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-num">03 · Lending</div>
+          <h3>Liquidity Lending</h3>
+          <p>Future protocol-supported liquidity logic may help projects start with liquidity and grow into real demand over time.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-num">04 · Trust Score</div>
+          <h3>Trust Score Logic</h3>
+          <p>Market health can be measured through real activity and the balance between borrowed and real liquidity.</p>
+        </div>
+        <div class="program-card">
+          <div class="program-num">05 · Real Activity</div>
+          <h3>Usage-Driven Growth</h3>
+          <p>Liquidity becomes stronger through real users, real activity and real market participation.</p>
+        </div>
+      </div>
+
+      <div class="strong-line reveal">You do not need liquidity to start. You start with it, and your market becomes real as users trade.</div>
+    </div>
+  </section>
+
+  <!-- ===== Section 6 — Synthetic RWA Direction ===== -->
+  <section id="synthetic-rwa">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">05 · Future RWA</div>
+        <h2>Synthetic RWA Direction</h2>
+        <div class="section-subtitle">Future market rails for tokenized representations of real-world value.</div>
+        <p class="section-desc">
+          Synthetic RWA is the next major direction for the BWiGA ecosystem. The goal is not only to create digital representations of real-world assets, but to build the <strong>protected market, liquidity and settlement infrastructure</strong> around them.
+        </p>
+        <p class="section-desc">
+          This future layer can support tokenized representations of assets such as gold, real estate indexes, equity baskets or other real-world value exposures, connected to BWiGA's broader market rails.
+        </p>
+      </div>
+
+      <!-- 4 key ideas -->
+      <div class="pillar-grid reveal">
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 3v18"/></svg></div>
+          <h3>Tokenized Market Representations</h3>
+          <p>Digital market exposure to real-world value through on-chain infrastructure.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <h3>Protected Market Logic</h3>
+          <p>RWA markets need more than tokenization. They need protection, liquidity and settlement design.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h3>Cross-Chain Direction</h3>
+          <p>Future RWA rails should not be trapped in fragmented single-chain markets.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <h3>Settlement Layer Connection</h3>
+          <p>InvertX and liquidity infrastructure may support future RWA market coordination.</p>
+        </div>
+      </div>
+
+      <!-- 6 visual asset examples -->
+      <div class="section-head reveal" style="margin-top: 64px; margin-bottom: 32px;">
+        <div class="section-subtitle">Visual asset examples</div>
+      </div>
+      <div class="criteria-grid reveal">
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="6" x2="12" y2="12"/><circle cx="12" cy="14" r="2"/></svg></div>
+          <h4>Tokenized Gold</h4>
+          <p>On-chain market representation of gold exposure.</p>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V9l9-7 9 7v12M9 21v-6h6v6"/></svg></div>
+          <h4>Real Estate Index</h4>
+          <p>Digital representation of real estate market exposure.</p>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg></div>
+          <h4>Equity Basket</h4>
+          <p>Tokenized representation of broader equity market exposure.</p>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h4>Protected Market</h4>
+          <p>Market design supported by protocol-level protection logic.</p>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><line x1="12" y1="3" x2="12" y2="21"/></svg></div>
+          <h4>Settlement Layer</h4>
+          <p>Future stable settlement and liquidity coordination through INFI MultiChain infrastructure.</p>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20M2 12h20"/></svg></div>
+          <h4>Cross-Chain Access</h4>
+          <p>Multi-chain direction for broader market reach and liquidity availability.</p>
+        </div>
+      </div>
+
+      <div class="strong-line reveal">RWA will not scale only through tokenization. It needs liquidity, settlement and protected markets.</div>
+
+      <div class="accent-quote reveal">
+        We are not just tokenizing assets. We are building the market rails around them.
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Section 7 — Final CTA ===== -->
+  <section class="final-cta">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="section-eyebrow" style="margin-bottom: 20px;">06 · Build with rails</div>
+        <h2>Build on market rails,<br /><span style="background:linear-gradient(135deg,var(--gold-soft),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;">not market chaos.</span></h2>
+        <p>BWiGA Market Rails — through Technology Partner INFI MultiChain — are designed for founders who want to move from launch to listing, from trading to liquidity, and from early market entry to long-term ecosystem growth — with more structure.</p>
+
+        <!-- Flow elements -->
+        <div class="compact-benefits reveal" style="margin: 48px 0; max-width: 920px; margin-left: auto; margin-right: auto;">
+          <div class="compact-item">
+            <div class="compact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5L3 22l5.5-1.5L21 8l-5-5z"/></svg></div>
+            <h6>Launch<br /><span style="font-weight:400;color:var(--text-tertiary);">Go to market with confidence.</span></h6>
+          </div>
+          <div class="compact-item">
+            <div class="compact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+            <h6>Listing<br /><span style="font-weight:400;color:var(--text-tertiary);">Secure, compliant and trusted.</span></h6>
+          </div>
+          <div class="compact-item">
+            <div class="compact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg></div>
+            <h6>Trading<br /><span style="font-weight:400;color:var(--text-tertiary);">Protected markets with real integrity.</span></h6>
+          </div>
+          <div class="compact-item">
+            <div class="compact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+            <h6>Liquidity<br /><span style="font-weight:400;color:var(--text-tertiary);">Deep, sustainable and aligned.</span></h6>
+          </div>
+        </div>
+
+        <div class="cta-row" style="flex-wrap: wrap; justify-content: center; gap: 16px;">
+          <a href="apply.html#founder" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5L3 22l5.5-1.5L21 8l-5-5z"/></svg>
+            Apply as a Founder
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="index.html" class="btn btn-secondary">Explore Accelerator</a>
+          <a href="mailto:mail@lead-volume.com?subject=BWiGA Market Rails Discussion" class="btn btn-secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Talk to BWiGA Accelerator
+          </a>
+        </div>
+
+        <div class="strong-line reveal" style="margin-top: 48px;">BWiGA connects founders with the ecosystem. Technology partners provide the rails to help them enter the market with structure.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== Footer (BWiGA spec) ===== -->
+<footer class="site-footer">
+
+  <!-- 1. Top CTA bar -->
+  <div class="footer-cta-bar">
+    <div class="wrap">
+      <div class="footer-cta-inner">
+        <div class="footer-cta-mark">
+          <img src="assets/logo.png" alt="" aria-hidden="true" />
+        </div>
+        <div class="footer-cta-text">
+          <h3>Ready to build with the BWiGA ecosystem?</h3>
+          <p>Apply as a founder, join as an investor or become part of the BWiGA Accelerator partner network.</p>
+        </div>
+        <div class="footer-cta-actions">
+          <a href="apply.html" class="btn btn-primary">
+            Apply Now
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="book-intro-call.html" class="btn btn-secondary">Book an Intro Call</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Main 5-column footer -->
+  <div class="footer-main">
+    <div class="wrap">
+      <div class="footer-grid">
+
+        <!-- Brand block -->
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="BWiGA Accelerator home">
+            <span class="logo-mark"><img src="assets/logo.png" alt="BWiGA Accelerator" /></span>
+            <span class="logo-text">BWiGA</span>
+            <span class="logo-suffix">Accelerator</span>
+          </a>
+          <p>Premium Web3 &amp; iGaming accelerator ecosystem for founders, investors and industry leaders.</p>
+          <div class="footer-strap">Capital. Visibility. Partners. Market access.</div>
+          <div class="footer-strap-2">Built for projects ready to scale beyond noise.</div>
+
+          <div class="footer-social" aria-label="Social channels">
+            <a href="#" aria-label="X / Twitter" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="#" aria-label="Telegram" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+            <a href="mailto:mail@lead-volume.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Explore -->
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="index.html">Accelerator</a></li>
+            <li><a href="market-rails.html">Market Rails</a></li>
+            <li><a href="for-founders.html">For Founders</a></li>
+            <li><a href="investors.html">Investors &amp; Partners</a></li>
+            <li><a href="ai-tech-tracks.html">AI Tech Tracks</a></li>
+          </ul>
+        </div>
+
+        <!-- Ecosystem -->
+        <div class="footer-col">
+          <h5>Ecosystem</h5>
+          <ul>
+            <li><a href="mentors-advisors.html">Mentors &amp; Advisors</a></li>
+            <li><a href="media-events.html">Media &amp; Events</a></li>
+            <li><a href="demo-day.html">Demo Day</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="upcoming-cohort.html">Upcoming Cohort</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="insights.html#market-readiness-thesis">Market Readiness Thesis</a></li>
+            <li><a href="insights.html#ai-web3-thesis">AI &times; Web3 Thesis</a></li>
+            <li><a href="resources.html">Founder Resources</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+          </ul>
+        </div>
+
+        <!-- Apply -->
+        <div class="footer-col">
+          <h5>Apply</h5>
+          <ul>
+            <li><a href="apply.html#founder">Apply as a Founder</a></li>
+            <li><a href="apply.html#partners">Join Investor Network</a></li>
+            <li><a href="apply.html#partners">Become a Partner</a></li>
+            <li><a href="apply.html#refer">Refer a Project</a></li>
+            <li><a href="book-intro-call.html">Book an Intro Call</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Risk note -->
+  <div class="wrap">
+    <div class="footer-risk">
+      BWiGA Accelerator does not provide financial, investment, legal, tax or regulatory advice. Nothing on this website guarantees acceptance, investment, fundraising, partnership, media access, event participation, listing, liquidity, returns or any specific outcome. All participation, investment and partnership decisions remain the sole responsibility of each participant. Technology partners — including INFI MultiChain (a fully decentralized ecosystem) — may support selected projects where relevant; they do not operate the accelerator.
+    </div>
+  </div>
+
+  <!-- 4. Legal bar -->
+  <div class="wrap">
+    <div class="footer-legal">
+      <div class="footer-legal-links">
+        <a href="legal-disclaimer.html">Legal Disclaimer</a>
+        <a href="risk-disclaimer.html">Risk Disclaimer</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-copyright">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>© 2026 BWiGA. BWiGA Accelerator. All rights reserved.</span>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<script src="script.js"></script>
+<script src="chat.js"></script>
+</body>
+</html>

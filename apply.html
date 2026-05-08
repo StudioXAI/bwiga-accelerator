@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ===== SEO ===== -->
+<title>Apply as a Founder — BWiGA Accelerator</title>
+<meta name="description" content="Apply to BWiGA Accelerator. Selected AI-native, Web3, fintech, RWA and DePIN founders gain access to fundraising, protected market entry, investor networks and structured market activation." />
+<meta name="keywords" content="BWiGA Accelerator application, Web3 accelerator apply, AI startup application, fintech accelerator, RWA, DePIN, founder application, blockchain accelerator" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="author" content="BWiGA Accelerator" />
+<meta name="language" content="English" />
+<link rel="canonical" href="https://bwiga-accelerator.vercel.app/apply.html" />
+
+<!-- Open Graph (Facebook, LinkedIn, Discord, Telegram) -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bwiga-accelerator.vercel.app/apply.html" />
+<meta property="og:title" content="Apply as a Founder — BWiGA Accelerator" />
+<meta property="og:description" content="Selected AI-native, Web3, fintech, RWA and DePIN founders gain access to fundraising, protected market entry and structured market activation." />
+<meta property="og:image" content="https://bwiga-accelerator.vercel.app/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="BWiGA Accelerator — From idea to market activation" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="BWiGA Accelerator" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content="https://bwiga-accelerator.vercel.app/apply.html" />
+<meta name="twitter:title" content="Apply as a Founder — BWiGA Accelerator" />
+<meta name="twitter:description" content="Selected AI-native, Web3, fintech, RWA and DePIN founders gain access to fundraising, protected market entry and structured market activation." />
+<meta name="twitter:image" content="https://bwiga-accelerator.vercel.app/assets/og-image.png" />
+
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+
+<!-- Theme color (mobile browsers) -->
+<meta name="theme-color" content="#030508" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+
+<style>
+  /* Apply page-specific overrides */
+  .apply-wrap { max-width: 720px; margin: 0 auto; padding: 140px var(--gutter) 80px; }
+  .apply-wrap > h1 {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    margin-bottom: 16px;
+  }
+  .apply-wrap > h1 .accent {
+    background: linear-gradient(135deg, var(--gold-soft) 0%, var(--cyan) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .apply-wrap > p.lead { color: var(--text-secondary); font-size: 17px; margin-bottom: 32px; line-height: 1.6; }
+  .apply-info {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 16px 18px;
+    background: rgba(34, 211, 238, 0.05);
+    border: 1px solid var(--border-cyan);
+    border-radius: var(--radius-md);
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+  }
+  .apply-info svg { width: 20px; height: 20px; color: var(--cyan); flex-shrink: 0; margin-top: 2px; }
+  .apply-info strong { color: white; }
+
+  .form-grid { display: grid; gap: 22px; }
+  .field { display: grid; gap: 8px; }
+  .field label {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--gold-soft);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .field label .req {
+    color: var(--gold);
+    font-size: 12px;
+  }
+  .field input, .field select, .field textarea {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    transition: all 0.2s;
+    width: 100%;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+  }
+  .field input::placeholder, .field textarea::placeholder { color: var(--text-muted); }
+  .field textarea { resize: vertical; min-height: 110px; font-family: inherit; }
+
+  /* Validation states (post-attempt) */
+  .form-grid.attempted .field input:invalid,
+  .form-grid.attempted .field select:invalid,
+  .form-grid.attempted .field textarea:invalid {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.04);
+  }
+  .form-grid.attempted .field input:valid,
+  .form-grid.attempted .field select:valid,
+  .form-grid.attempted .field textarea:valid {
+    border-color: rgba(16, 185, 129, 0.4);
+  }
+  .field-hint {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+  .field-hint.error {
+    color: #f87171;
+    display: none;
+  }
+  .form-grid.attempted .field input:invalid ~ .field-hint.error,
+  .form-grid.attempted .field select:invalid ~ .field-hint.error,
+  .form-grid.attempted .field textarea:invalid ~ .field-hint.error {
+    display: block;
+  }
+
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  @media (max-width: 600px) { .field-row { grid-template-columns: 1fr; gap: 22px; } }
+  .submit-row { margin-top: 24px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .submit-row small { color: var(--text-tertiary); font-size: 13px; line-height: 1.5; flex: 1; min-width: 200px; }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--text-tertiary); font-size: 13px;
+    margin-bottom: 32px; transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--gold); }
+  .submit-btn-with-spinner { position: relative; }
+  .submit-btn-with-spinner.loading { opacity: 0.7; pointer-events: none; }
+  .submit-btn-with-spinner.loading::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-top-color: #000;
+    border-radius: 50%;
+    animation: btn-spin 0.7s linear infinite;
+    right: 14px;
+    top: 50%;
+    margin-top: -7px;
+  }
+  @keyframes btn-spin { to { transform: rotate(360deg); } }
+
+  /* Tab nav between Founder / Partners forms */
+  .apply-tabs {
+    display: flex; gap: 4px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px;
+    margin-bottom: 40px;
+    width: fit-content;
+    flex-wrap: wrap;
+  }
+  .apply-tab {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 18px;
+    font-size: 13px; font-weight: 600;
+    color: var(--text-tertiary);
+    border-radius: 999px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  .apply-tab:hover { color: var(--text-secondary); }
+  .apply-tab.is-active {
+    background: linear-gradient(135deg, rgba(34, 211, 238, 0.12), rgba(16, 229, 153, 0.10));
+    color: white;
+    box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.3) inset;
+  }
+  .apply-tab svg { color: currentColor; }
+  @media (max-width: 480px) {
+    .apply-tabs { width: 100%; justify-content: center; }
+    .apply-tab { flex: 1; justify-content: center; }
+  }
+
+  /* Honeypot — visually & functionally hidden, but still in DOM for bots */
+  .honeypot {
+    position: absolute !important;
+    left: -10000px !important;
+    top: auto !important;
+    width: 1px !important; height: 1px !important;
+    overflow: hidden !important;
+  }
+
+  /* Consent checkbox row */
+  .field.consent { gap: 4px; }
+  .consent-label {
+    display: flex; gap: 12px; align-items: flex-start;
+    font-family: var(--font-body);
+    font-size: 13.5px;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    cursor: pointer;
+  }
+  .consent-label input[type="checkbox"] {
+    width: 18px; height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    accent-color: var(--cyan);
+    cursor: pointer;
+  }
+  .form-grid.attempted .field.consent input:invalid ~ .field-hint.error,
+  .form-grid.attempted .consent-label input:invalid ~ .field-hint.error { display: block; }
+
+  /* Success / error result blocks */
+  .apply-success, .apply-error {
+    margin-top: 40px;
+    padding: 28px 32px;
+    border-radius: var(--radius-lg);
+    border: 1px solid;
+  }
+  .apply-success {
+    background: linear-gradient(135deg, rgba(16, 229, 153, 0.06), rgba(34, 211, 238, 0.05));
+    border-color: rgba(16, 229, 153, 0.3);
+  }
+  .apply-success h3 {
+    color: #67e8f9; margin-bottom: 12px; font-size: 22px;
+  }
+  .apply-success p {
+    color: var(--text-secondary); line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .apply-success .muted { color: var(--text-tertiary); font-size: 13px; }
+
+  .apply-error {
+    background: rgba(239, 68, 68, 0.05);
+    border-color: rgba(239, 68, 68, 0.4);
+  }
+  .apply-error h3 { color: #f87171; margin-bottom: 10px; font-size: 20px; }
+  .apply-error p { color: var(--text-secondary); line-height: 1.6; }
+  .apply-error a { color: var(--cyan-soft); }
+
+  /* Hide form by section visibility */
+  .apply-section[hidden] { display: none; }
+  .apply-section { animation: section-fade-in 0.3s ease; }
+  @keyframes section-fade-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+  .apply-final-note {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+</style>
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Apply as a Founder — BWiGA Accelerator",
+  "description": "Apply to BWiGA Accelerator. Selected AI-native, Web3, fintech, RWA and DePIN founders gain access to fundraising, protected market entry, investor networks and structured market activation.",
+  "url": "https://bwiga-accelerator.vercel.app/apply.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "BWiGA Accelerator",
+    "url": "https://bwiga-accelerator.vercel.app/"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="bg-stage" aria-hidden="true">
+  <canvas id="network-canvas"></canvas>
+  <div class="bg-grid"></div>
+  <div class="bg-vignette"></div>
+  <div class="bg-grain"></div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="BWiGA Accelerator home">
+      <span class="logo-mark"><img src="assets/logo.png" alt="BWiGA Accelerator" /></span>
+      <span class="logo-text">BWiGA</span>
+      <span class="logo-suffix">Accelerator</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <div class="nav-item has-dropdown">
+        <a href="index.html" class="nav-link" aria-haspopup="true">
+          Accelerator
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="mega-menu" role="menu">
+          <div class="mega-grid">
+            <div class="mega-intro">
+              <h4>BWiGA Accelerator</h4>
+              <p>A market activation accelerator for AI-native, Web3, fintech, RWA and DePIN founders preparing to launch, raise, list, gain visibility and build liquidity through protected market infrastructure.</p>
+              <a href="index.html" class="mega-cta">Explore Accelerator <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="mega-links">
+              <a href="index.html#what-is-accelerator" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>What is BWiGA Accelerator?</div><div class="mega-link-desc">A new accelerator model combining startup support, market infrastructure and protected market entry.</div></a>
+              <a href="index.html#how-it-works" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>How It Works</div><div class="mega-link-desc">A clear journey from application to advisory, launch preparation and market activation.</div></a>
+              <a href="index.html#program-structure" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Program Structure</div><div class="mega-link-desc">Founder selection, strategy sprint, fundraising preparation, market rails and launch readiness.</div></a>
+              <a href="index.html#selection-criteria" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Selection Criteria</div><div class="mega-link-desc">What we look for in teams, products, token models, market potential, traction and fit.</div></a>
+              <a href="index.html#demo-day" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Demo Day</div><div class="mega-link-desc">Selected projects present to investors, partners and ecosystem participants.</div></a>
+              <a href="index.html#market-activation-thesis" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Market Activation Thesis</div><div class="mega-link-desc">Strong projects need structured launch, protected trading and visibility.</div></a>
+              <a href="index.html#faq" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>FAQ</div><div class="mega-link-desc">Key questions for founders, investors and ecosystem partners.</div></a>
+            </div>
+          </div>
+          <div class="mega-foot"><span>Ready to build the future?</span><a href="apply.html" class="mega-foot-cta">Apply Now <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+
+      <div class="nav-item has-dropdown">
+        <a href="for-founders.html" class="nav-link" aria-haspopup="true">
+          For Founders
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="mega-menu" role="menu">
+          <div class="mega-grid">
+            <div class="mega-intro">
+              <h4>For founders who want more than advice.</h4>
+              <p>BWiGA Accelerator helps selected AI-native, Web3, fintech, RWA and DePIN projects prepare for fundraising, launch, protected market entry, visibility, investor access and liquidity activation.</p>
+              <a href="for-founders.html" class="mega-cta">Explore Founder Benefits <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="mega-links">
+              <a href="for-founders.html#founder-benefits" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Founder Benefits</div><div class="mega-link-desc">See what selected founders can access.</div></a>
+              <a href="for-founders.html#automated-fundraising" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Automated Fundraising</div><div class="mega-link-desc">Structured fundraising via Launchpad logic.</div></a>
+              <a href="for-founders.html#protected-market-entry" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Protected Market Entry</div><div class="mega-link-desc">Reduce harmful early-market behavior.</div></a>
+              <a href="for-founders.html#media-events" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Media &amp; Event Visibility</div><div class="mega-link-desc">Reach the right rooms at the right time.</div></a>
+              <a href="for-founders.html#investor-access" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Investor &amp; VC Access</div><div class="mega-link-desc">Curated investor conversations.</div></a>
+              <a href="for-founders.html#go-to-market" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Go-to-Market Support</div><div class="mega-link-desc">From visibility to adoption.</div></a>
+            </div>
+          </div>
+          <div class="mega-foot"><span>A strong project should not enter the market alone.</span><a href="apply.html" class="mega-foot-cta">Apply as a Founder <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+
+      <!-- Market Rails dropdown -->
+      <div class="nav-item has-dropdown">
+        <a href="market-rails.html" class="nav-link" aria-haspopup="true">
+          Market Rails
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="mega-menu" role="menu">
+          <div class="mega-grid">
+            <div class="mega-intro">
+              <h4>Market Rails</h4>
+              <p>Protocol-driven infrastructure for launch, listing, protected trading, liquidity activation and future cross-chain market expansion.</p>
+              <a href="market-rails.html" class="mega-cta">Explore Market Rails <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="mega-links">
+              <a href="market-rails.html#launchpad" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Launchpad</div><div class="mega-link-desc">Automated fundraising and launch execution where founders define the logic and the protocol executes.</div></a>
+              <a href="market-rails.html#cdex" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>CDEX</div><div class="mega-link-desc">A non-custodial trading environment where listing, trading and protection logic operate inside one system.</div></a>
+              <a href="market-rails.html#shield" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>SbSe Shield</div><div class="mega-link-desc">Protocol-level protection logic designed to reduce harmful manipulation, liquidity shocks and destructive early trading behavior.</div></a>
+              <a href="market-rails.html#invertx-liquidity" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>InvertX &amp; Liquidity Layer</div><div class="mega-link-desc">Future settlement and liquidity infrastructure designed to reduce fragmentation across chains and support market activation.</div></a>
+              <a href="market-rails.html#synthetic-rwa" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Synthetic RWA Direction</div><div class="mega-link-desc">Future market layer for tokenized representations of real-world value, built around protected markets and stable settlement logic.</div></a>
+            </div>
+          </div>
+          <div class="mega-foot"><span>Not just acceleration. Market infrastructure from launch to liquidity.</span><a href="apply.html" class="mega-foot-cta">Apply as a Founder <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+
+      <!-- Investors & Partners dropdown -->
+      <div class="nav-item has-dropdown">
+        <a href="investors.html" class="nav-link" aria-haspopup="true">
+          Investors &amp; Partners
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="mega-menu" role="menu">
+          <div class="mega-grid">
+            <div class="mega-intro">
+              <h4>Investors &amp; Ecosystem Partners</h4>
+              <p>Connect with selected AI x Web3 founders before market activation, or join the BWiGA Accelerator ecosystem as a strategic partner across capital, media, events, advisory, security and growth.</p>
+              <a href="investors.html" class="mega-cta">Explore Ecosystem <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="mega-links">
+              <a href="investors.html#investor-network" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Investor Network</div><div class="mega-link-desc">Join a curated network of angels, VCs, funds and strategic investors interested in selected AI x Web3 market opportunities.</div></a>
+              <a href="investors.html#curated-deal-flow" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Curated Deal Flow</div><div class="mega-link-desc">Access selected projects preparing for launch, listing, protected trading, liquidity planning, Demo Day and market activation.</div></a>
+              <a href="investors.html#protected-market-thesis" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Protected Market Thesis</div><div class="mega-link-desc">Explore opportunities built around a structured market-entry path designed to reduce harmful early-market manipulation.</div></a>
+              <a href="investors.html#ecosystem-partnerships" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Ecosystem Partnerships</div><div class="mega-link-desc">Partner with BWiGA Accelerator across media, events, advisory, security, growth, infrastructure and strategic market access.</div></a>
+              <a href="investors.html#join" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Join / Partner With Us</div><div class="mega-link-desc">Apply as an investor, ecosystem partner, advisor, media partner, event partner or strategic collaborator.</div></a>
+            </div>
+          </div>
+          <div class="mega-foot"><span>Curated access. Stronger founders. Strategic ecosystem value.</span><a href="apply.html" class="mega-foot-cta">Join the Network <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+      <!-- AI Tech Tracks dropdown -->
+      <div class="nav-item has-dropdown">
+        <a href="ai-tech-tracks.html" class="nav-link" aria-haspopup="true">
+          AI Tech Tracks
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="mega-menu" role="menu">
+          <div class="mega-grid">
+            <div class="mega-intro">
+              <h4>AI Tech Tracks</h4>
+              <p>AI-native project tracks for founders building at the intersection of intelligence, automation, payments, infrastructure, finance and Web3 market systems.</p>
+              <a href="ai-tech-tracks.html" class="mega-cta">Explore AI Tracks <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            </div>
+            <div class="mega-links">
+              <a href="ai-tech-tracks.html#ai-agents-payments" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>AI Agents &amp; Payments</div><div class="mega-link-desc">Autonomous agents, agent wallets, AI commerce, stablecoin automation and machine-to-machine payments.</div></a>
+              <a href="ai-tech-tracks.html#ai-infrastructure" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>AI Infrastructure &amp; DePIN</div><div class="mega-link-desc">Decentralized compute, GPU networks, inference, data infrastructure, storage and resource markets.</div></a>
+              <a href="ai-tech-tracks.html#ai-infrastructure" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>AI &times; RWA &amp; Finance</div><div class="mega-link-desc">Tokenized assets, AI underwriting, treasury automation, synthetic RWA and programmable finance.</div></a>
+              <a href="ai-tech-tracks.html#ai-infrastructure" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>AI Trust &amp; Security</div><div class="mega-link-desc">Agent identity, fraud detection, wallet risk scoring, smart contract monitoring and verification systems.</div></a>
+              <a href="ai-tech-tracks.html#ai-infrastructure" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>AI Market Automation</div><div class="mega-link-desc">Trading intelligence, liquidity analytics, risk engines, investor dashboards and automated market tools.</div></a>
+              <a href="ai-tech-tracks.html#apply" class="mega-link"><div class="mega-link-title"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>Apply with an AI Project</div><div class="mega-link-desc">Submit your AI-native project for the accelerator.</div></a>
+            </div>
+          </div>
+          <div class="mega-foot"><span>AI creates intelligence. Web3 creates ownership and market access. BWiGA connects founders to the ecosystem.</span><a href="apply.html" class="mega-foot-cta">Apply with an AI Project <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </div>
+    </nav>
+
+    <a href="apply.html" class="apply-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5L3 22l5.5-1.5L21 8l-5-5z"/></svg>
+      Apply
+    </a>
+
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+<aside class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+  <a href="index.html">Accelerator <small>The accelerator program</small></a>
+  <a href="for-founders.html">For Founders <small>Founder benefits &amp; resources</small></a>
+  <a href="investors.html">Investors &amp; Partners <small>Capital &amp; ecosystem partners</small></a>
+  <a href="ai-tech-tracks.html">AI Tech Tracks <small>Specialized AI tracks</small></a>
+  <a href="apply.html" class="apply-btn">Apply Now</a>
+</aside>
+
+<main class="container">
+  <div class="apply-wrap">
+    <a href="index.html" class="back-link">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Accelerator
+    </a>
+
+    <!-- Tab nav between the two forms -->
+    <div class="apply-tabs" role="tablist" aria-label="Application type">
+      <a href="#founder" class="apply-tab" role="tab" data-tab="founder">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Apply as a Founder
+      </a>
+      <a href="#partners" class="apply-tab" role="tab" data-tab="partners">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        Investors &amp; Partners
+      </a>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- FOUNDER FORM                                                  -->
+    <!-- ============================================================ -->
+    <section id="founder" class="apply-section">
+      <h1>Apply as a <span class="accent">Founder</span>.</h1>
+      <p class="lead">Tell us about your project. The BWiGA Accelerator team reviews every application personally — typical response time is 5–10 business days.</p>
+
+      <div class="apply-info">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <div>
+          <strong>All fields are required.</strong> Your application is sent directly to the BWiGA Accelerator team at <a href="mailto:mail@lead-volume.com" style="color:var(--cyan-soft);">mail@lead-volume.com</a>. Please use accessible links for pitch decks, demos or supporting materials. We do not accept direct file uploads at this stage.
+        </div>
+      </div>
+
+      <form class="form-grid" id="founder-form" novalidate>
+        <!-- Honeypot anti-spam (hidden from users) -->
+        <div class="honeypot" aria-hidden="true">
+          <label for="companyWebsiteHidden">Leave this empty</label>
+          <input type="text" id="companyWebsiteHidden" name="companyWebsiteHidden" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="founderName">Founder name <span class="req">*</span></label>
+            <input type="text" id="founderName" name="founderName" required maxlength="120" autocomplete="name" placeholder="Your full name" />
+            <span class="field-hint error">Please enter your full name.</span>
+          </div>
+          <div class="field">
+            <label for="founderEmail">Email <span class="req">*</span></label>
+            <input type="email" id="founderEmail" name="email" required maxlength="180" autocomplete="email" placeholder="founder@yourproject.com" />
+            <span class="field-hint error">Please enter a valid email address.</span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="projectName">Project name <span class="req">*</span></label>
+            <input type="text" id="projectName" name="projectName" required maxlength="160" placeholder="Your project's name" />
+            <span class="field-hint error">Project name is required.</span>
+          </div>
+          <div class="field">
+            <label for="founderWebsite">Website / landing page <span class="req">*</span></label>
+            <input type="url" id="founderWebsite" name="website" required maxlength="300" placeholder="https://yourproject.com" />
+            <span class="field-hint">Use your main website, landing page, demo or public project profile.</span>
+            <span class="field-hint error">Please enter a valid URL (https://...).</span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="founderCategory">Category <span class="req">*</span></label>
+            <select id="founderCategory" name="category" required>
+              <option value="">Select one or more categories…</option>
+              <option value="AI Agents &amp; Payments">AI Agents &amp; Payments</option>
+              <option value="AI Infrastructure &amp; DePIN">AI Infrastructure &amp; DePIN</option>
+              <option value="AI x RWA &amp; Finance">AI &times; RWA &amp; Finance</option>
+              <option value="AI Trust &amp; Security">AI Trust &amp; Security</option>
+              <option value="AI Market Automation">AI Market Automation</option>
+              <option value="Web3 Infrastructure">Web3 Infrastructure</option>
+              <option value="DeFi / Liquidity / DEX">DeFi / Liquidity / DEX</option>
+              <option value="Fintech / Payments">Fintech / Payments</option>
+              <option value="RWA / Tokenized Markets">RWA / Tokenized Markets</option>
+              <option value="Gaming / iGaming / Entertainment">Gaming / iGaming / Entertainment</option>
+              <option value="DAO / Governance / Community">DAO / Governance / Community</option>
+              <option value="Security / Compliance / Risk">Security / Compliance / Risk</option>
+              <option value="Other">Other</option>
+            </select>
+            <span class="field-hint error">Please choose a category.</span>
+          </div>
+          <div class="field">
+            <label for="founderStage">Current stage <span class="req">*</span></label>
+            <select id="founderStage" name="currentStage" required>
+              <option value="">Select stage…</option>
+              <option value="Idea / Concept">Idea / Concept</option>
+              <option value="Research / Whitepaper">Research / Whitepaper</option>
+              <option value="Prototype">Prototype</option>
+              <option value="MVP">MVP</option>
+              <option value="Testnet / Closed Beta">Testnet / Closed Beta</option>
+              <option value="Public Beta">Public Beta</option>
+              <option value="Live Product">Live Product</option>
+              <option value="Pre-Launch / Token Planning">Pre-Launch / Token Planning</option>
+              <option value="Fundraising Stage">Fundraising Stage</option>
+              <option value="Preparing for Listing / Market Activation">Preparing for Listing / Market Activation</option>
+              <option value="Post-Launch / Scaling">Post-Launch / Scaling</option>
+            </select>
+            <span class="field-hint error">Please choose a stage.</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="projectDescription">Project description <span class="req">*</span></label>
+          <textarea id="projectDescription" name="projectDescription" required minlength="40" maxlength="1500" placeholder="What problem does it solve? What makes it different? Who is it for?"></textarea>
+          <span class="field-hint">Aim for 2–4 sentences. Tell us what you are building and why it matters.</span>
+          <span class="field-hint error">Description is required (minimum 40 characters).</span>
+        </div>
+
+        <div class="field">
+          <label for="needsFromBwiga">What do you need from BWiGA? <span class="req">*</span></label>
+          <textarea id="needsFromBwiga" name="needsFromBwiga" required minlength="20" maxlength="1500" placeholder="Investor access, media visibility, event participation, go-to-market support, strategic partners, technology support, market readiness or acceleration support…"></textarea>
+          <span class="field-hint">Tell us what kind of support would create the most value for your project. Examples: fundraising readiness, investor access, pitch preparation, event visibility, founder showcase, strategic partnerships, technology partner access (e.g. INFI MultiChain market rails) where relevant.</span>
+          <span class="field-hint error">Please tell us what you'd like help with.</span>
+        </div>
+
+        <div class="field">
+          <label for="founderLinks">Links — pitch deck / demo / socials <span class="req">*</span></label>
+          <textarea id="founderLinks" name="links" required minlength="10" maxlength="2000" placeholder="Paste your pitch deck, demo, GitHub, Notion, DocSend, Google Drive, Dropbox, X / LinkedIn, Telegram, Discord or community links here."></textarea>
+          <span class="field-hint">Please make sure your links are accessible. We do not accept direct file uploads at this stage.</span>
+          <span class="field-hint error">Please share at least one accessible link.</span>
+        </div>
+
+        <div class="field consent">
+          <label class="consent-label">
+            <input type="checkbox" id="founderConsent" name="consent" required />
+            <span>I confirm that the information submitted is accurate to the best of my knowledge and that I have the right to share these materials with BWiGA Accelerator for review purposes.</span>
+          </label>
+          <span class="field-hint error">Please confirm to continue.</span>
+        </div>
+
+        <div class="submit-row">
+          <button type="submit" class="btn btn-primary submit-btn-with-spinner" id="founder-submit">
+            Submit Application
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <small>By submitting, you agree to our review process. Your application is sent directly to the BWiGA Accelerator team. Submission does not guarantee acceptance, investment, listing, partnership, funding, media access, event participation or any specific outcome.</small>
+        </div>
+      </form>
+
+      <div id="founder-success" class="apply-success" hidden>
+        <h3>Application Submitted ✓</h3>
+        <p>Thank you for applying to BWiGA Accelerator. Our team will review your submission and contact you if your project fits the current accelerator or ecosystem review process.</p>
+        <p class="muted">Typical response time: 5–10 business days.</p>
+      </div>
+      <div id="founder-error" class="apply-error" hidden>
+        <h3>Submission failed</h3>
+        <p>We couldn't send your application right now. Please try again, or email <a href="mailto:mail@lead-volume.com">mail@lead-volume.com</a> directly.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- INVESTOR / PARTNER FORM                                       -->
+    <!-- ============================================================ -->
+    <section id="partners" class="apply-section" hidden>
+      <h1>Apply to join the <span class="accent">BWiGA Accelerator</span> ecosystem.</h1>
+      <p class="lead">Tell us who you are, how you operate and how you would like to collaborate with BWiGA Accelerator. Our team usually responds within 5 business days.</p>
+
+      <div class="apply-info">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <div>
+          Your submission is sent directly to the BWiGA Accelerator team at <a href="mailto:mail@lead-volume.com" style="color:var(--cyan-soft);">mail@lead-volume.com</a>. We review investor, partner and ecosystem collaboration requests personally. No file upload is required.
+        </div>
+      </div>
+
+      <form class="form-grid" id="partner-form" novalidate>
+        <div class="honeypot" aria-hidden="true">
+          <label for="companyWebsiteHidden2">Leave this empty</label>
+          <input type="text" id="companyWebsiteHidden2" name="companyWebsiteHidden" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="partnerName">Full name <span class="req">*</span></label>
+            <input type="text" id="partnerName" name="fullName" required maxlength="120" autocomplete="name" placeholder="Your full name" />
+            <span class="field-hint error">Please enter your full name.</span>
+          </div>
+          <div class="field">
+            <label for="partnerEmail">Email <span class="req">*</span></label>
+            <input type="email" id="partnerEmail" name="email" required maxlength="180" autocomplete="email" placeholder="you@company.com" />
+            <span class="field-hint error">Please enter a valid email address.</span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="company">Company / fund / organization <span class="req">*</span></label>
+            <input type="text" id="company" name="company" required maxlength="180" placeholder="Your organization" />
+            <span class="field-hint error">Please enter your organization.</span>
+          </div>
+          <div class="field">
+            <label for="websiteOrLinkedIn">Website / LinkedIn <span class="req">*</span></label>
+            <input type="url" id="websiteOrLinkedIn" name="websiteOrLinkedIn" required maxlength="300" placeholder="https://linkedin.com/in/example" />
+            <span class="field-hint error">Please enter a valid URL.</span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="currentActivity">Current activity / role <span class="req">*</span></label>
+            <select id="currentActivity" name="currentActivity" required>
+              <option value="">Select role…</option>
+              <option value="Angel Investor">Angel Investor</option>
+              <option value="VC / Investment Fund">VC / Investment Fund</option>
+              <option value="Family Office">Family Office</option>
+              <option value="Strategic Investor">Strategic Investor</option>
+              <option value="Media Partner">Media Partner</option>
+              <option value="Event Partner">Event Partner</option>
+              <option value="Advisor / Mentor">Advisor / Mentor</option>
+              <option value="Security / Audit Partner">Security / Audit Partner</option>
+              <option value="Growth / Marketing Partner">Growth / Marketing Partner</option>
+              <option value="Infrastructure Partner">Infrastructure Partner</option>
+              <option value="Corporate / Enterprise Partner">Corporate / Enterprise Partner</option>
+              <option value="Other">Other</option>
+            </select>
+            <span class="field-hint error">Please select your role.</span>
+          </div>
+          <div class="field">
+            <label for="collaborationInterest">Collaboration interest <span class="req">*</span></label>
+            <select id="collaborationInterest" name="collaborationInterest" required>
+              <option value="">Select interest…</option>
+              <option value="Join Investor Network">Join Investor Network</option>
+              <option value="Explore Investment Opportunities">Explore Investment Opportunities</option>
+              <option value="Become an Ecosystem Partner">Become an Ecosystem Partner</option>
+              <option value="Media Collaboration">Media Collaboration</option>
+              <option value="Event Collaboration">Event Collaboration</option>
+              <option value="Mentor / Advisor Role">Mentor / Advisor Role</option>
+              <option value="Security / Audit Collaboration">Security / Audit Collaboration</option>
+              <option value="Go-to-Market / Growth Support">Go-to-Market / Growth Support</option>
+              <option value="Infrastructure / Technical Integration">Infrastructure / Technical Integration</option>
+              <option value="Strategic Business Collaboration">Strategic Business Collaboration</option>
+              <option value="Refer Projects">Refer Projects</option>
+              <option value="Other">Other</option>
+            </select>
+            <span class="field-hint error">Please pick a collaboration interest.</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="shortIntroduction">Short introduction <span class="req">*</span></label>
+          <textarea id="shortIntroduction" name="shortIntroduction" required minlength="30" maxlength="1000" placeholder="Briefly introduce yourself, your company and your current activity."></textarea>
+          <span class="field-hint">Aim for 2–4 sentences.</span>
+          <span class="field-hint error">Please tell us a bit about yourself.</span>
+        </div>
+
+        <div class="field">
+          <label for="whyCollaborateWithBwiga">Why do you want to collaborate with BWiGA? <span class="req">*</span></label>
+          <textarea id="whyCollaborateWithBwiga" name="whyCollaborateWithBwiga" required minlength="30" maxlength="1500" placeholder="Tell us why BWiGA Accelerator is relevant for you and what kind of collaboration you see."></textarea>
+          <span class="field-hint">Mention investment access, media, events, advisory, partnerships, growth, infrastructure or strategic ecosystem collaboration.</span>
+          <span class="field-hint error">Please tell us why you'd like to collaborate.</span>
+        </div>
+
+        <div class="field">
+          <label for="relevantLinks">Relevant links</label>
+          <textarea id="relevantLinks" name="relevantLinks" maxlength="2000" placeholder="Website, LinkedIn, portfolio, fund page, media page, event page, previous collaborations or public references."></textarea>
+          <span class="field-hint">Optional but recommended. Public links only — no file uploads.</span>
+        </div>
+
+        <div class="field consent">
+          <label class="consent-label">
+            <input type="checkbox" id="partnerConsent" name="consent" required />
+            <span>I confirm that the information submitted is accurate to the best of my knowledge and that I have the right to share it with BWiGA Accelerator for review purposes.</span>
+          </label>
+          <span class="field-hint error">Please confirm to continue.</span>
+        </div>
+
+        <div class="submit-row">
+          <button type="submit" class="btn btn-primary submit-btn-with-spinner" id="partner-submit">
+            Submit Collaboration Request
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <small>By submitting, you agree to our review process. Submission does not guarantee investment access, partnership, advisory role, media access, event participation or any specific collaboration outcome.</small>
+        </div>
+      </form>
+
+      <div id="partner-success" class="apply-success" hidden>
+        <h3>Request Submitted ✓</h3>
+        <p>Thank you for your interest in collaborating with BWiGA Accelerator. Our team will review your submission and contact you if there is a relevant fit.</p>
+        <p class="muted">Typical response time: up to 5 business days.</p>
+      </div>
+      <div id="partner-error" class="apply-error" hidden>
+        <h3>Submission failed</h3>
+        <p>We couldn't send your request right now. Please try again, or email <a href="mailto:mail@lead-volume.com">mail@lead-volume.com</a> directly.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- REFER A PROJECT — short form                                  -->
+    <!-- ============================================================ -->
+    <section id="refer" class="apply-section" hidden>
+      <h1>Refer a <span class="accent">Project</span>.</h1>
+      <p class="lead">Know a promising builder? Send the project our way. Referrals go through the same review process — strong recommendations help us focus.</p>
+      <div class="apply-info">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div>For now, please email a short summary, the project's website and any relevant context to <a href="mailto:mail@lead-volume.com?subject=BWiGA Accelerator — Project Referral" style="color:var(--cyan-soft);">mail@lead-volume.com</a>. We're building a dedicated referral form — coming soon.</div>
+      </div>
+      <a href="mailto:mail@lead-volume.com?subject=BWiGA Accelerator — Project Referral" class="btn btn-primary">
+        Email a Referral
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </section>
+
+    <!-- Final legal note -->
+    <p class="apply-final-note">
+      BWiGA Accelerator is a curated ecosystem and startup acceleration initiative. INFI MultiChain may participate only as a technology and market rails partner where relevant. Submitting an application does not guarantee acceptance, investment, listing, funding, partnership, media access, event participation, liquidity, returns or any specific outcome.
+    </p>
+
+  </div>
+</main>
+
+<script src="script.js"></script>
+<script src="chat.js"></script>
+<script>
+/* =============================================================================
+   BWiGA Apply page — tab switching + AJAX submission
+   - Two forms: #founder-form → /api/apply-founder
+                #partner-form → /api/apply-partner
+   - Hash routing: #founder | #partners | #refer drives the visible section
+   - Honeypot anti-spam: companyWebsiteHidden must stay empty
+   - Failure mode: surface the error; never block the user from emailing directly
+   ============================================================================= */
+(function () {
+  'use strict';
+
+  /* -------- Tab switching ------------------------------------------- */
+  const tabs = document.querySelectorAll('.apply-tab');
+  const sections = document.querySelectorAll('.apply-section');
+  const VALID_HASHES = ['#founder', '#partners', '#refer'];
+
+  function showSection(hash) {
+    if (!VALID_HASHES.includes(hash)) hash = '#founder';
+    sections.forEach(s => { s.hidden = ('#' + s.id) !== hash; });
+    tabs.forEach(t => {
+      const isActive = t.getAttribute('href') === hash || ('#' + t.dataset.tab) === hash;
+      t.classList.toggle('is-active', isActive);
+    });
+  }
+
+  // Initial state — respect URL hash, else default to founder
+  showSection(window.location.hash || '#founder');
+
+  // Tab clicks: update hash; showSection runs on hashchange below
+  tabs.forEach(t => t.addEventListener('click', e => {
+    // Native anchor click already updates location.hash, just scroll smoothly
+    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 30);
+  }));
+  window.addEventListener('hashchange', () => showSection(window.location.hash));
+
+  /* -------- Generic AJAX form handler ------------------------------- */
+  function wireForm(formId, endpoint, successId, errorId, submitId) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+    const successEl = document.getElementById(successId);
+    const errorEl   = document.getElementById(errorId);
+    const submitBtn = document.getElementById(submitId);
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      form.classList.add('attempted');
+
+      // HTML5 validation — bail out and focus first invalid field
+      if (!form.checkValidity()) {
+        const firstInvalid = form.querySelector(':invalid');
+        if (firstInvalid) {
+          firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          firstInvalid.focus({ preventScroll: true });
+        }
+        return;
+      }
+
+      // Honeypot — silently succeed if filled
+      const honeypot = form.querySelector('[name="companyWebsiteHidden"]');
+      if (honeypot && honeypot.value.trim()) {
+        form.hidden = true;
+        if (successEl) successEl.hidden = false;
+        return;
+      }
+
+      // Visual lock during submit
+      submitBtn.classList.add('loading');
+      submitBtn.disabled = true;
+      if (errorEl) errorEl.hidden = true;
+
+      // Build JSON payload from form fields
+      const formData = new FormData(form);
+      const payload = {};
+      formData.forEach((v, k) => {
+        if (k === 'consent') { payload[k] = (v === 'on' || v === 'true' || !!v); return; }
+        if (payload[k] !== undefined) {
+          // multi-value (rare here, but be safe)
+          if (!Array.isArray(payload[k])) payload[k] = [payload[k]];
+          payload[k].push(v);
+        } else {
+          payload[k] = v;
+        }
+      });
+      payload.consent = !!form.querySelector('[name="consent"]:checked');
+
+      try {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        if (!res.ok) {
+          const errBody = await res.text().catch(() => '');
+          throw new Error('HTTP ' + res.status + ' ' + errBody.slice(0, 200));
+        }
+
+        // Success — hide form, show success block, reset state
+        form.hidden = true;
+        if (successEl) {
+          successEl.hidden = false;
+          successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        form.reset();
+      } catch (err) {
+        console.error('Submission failed:', err);
+        if (errorEl) {
+          errorEl.hidden = false;
+          errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      } finally {
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+      }
+    });
+
+    // Live: clear error styling once user fixes a field
+    form.querySelectorAll('input, select, textarea').forEach(el => {
+      el.addEventListener('input', () => {
+        if (form.classList.contains('attempted') && el.checkValidity()) {
+          // visual handled by :valid CSS — no JS needed
+        }
+      });
+    });
+  }
+
+  wireForm('founder-form', '/api/apply-founder', 'founder-success', 'founder-error', 'founder-submit');
+  wireForm('partner-form', '/api/apply-partner', 'partner-success', 'partner-error', 'partner-submit');
+})();
+</script>
+<!-- ===== Footer (BWiGA spec) ===== -->
+<footer class="site-footer">
+
+  <!-- 1. Top CTA bar -->
+  <div class="footer-cta-bar">
+    <div class="wrap">
+      <div class="footer-cta-inner">
+        <div class="footer-cta-mark">
+          <img src="assets/logo.png" alt="" aria-hidden="true" />
+        </div>
+        <div class="footer-cta-text">
+          <h3>Ready to build with the BWiGA ecosystem?</h3>
+          <p>Apply as a founder, join as an investor or become part of the BWiGA Accelerator partner network.</p>
+        </div>
+        <div class="footer-cta-actions">
+          <a href="apply.html" class="btn btn-primary">
+            Apply Now
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="book-intro-call.html" class="btn btn-secondary">Book an Intro Call</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Main 5-column footer -->
+  <div class="footer-main">
+    <div class="wrap">
+      <div class="footer-grid">
+
+        <!-- Brand block -->
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="BWiGA Accelerator home">
+            <span class="logo-mark"><img src="assets/logo.png" alt="BWiGA Accelerator" /></span>
+            <span class="logo-text">BWiGA</span>
+            <span class="logo-suffix">Accelerator</span>
+          </a>
+          <p>Premium Web3 &amp; iGaming accelerator ecosystem for founders, investors and industry leaders.</p>
+          <div class="footer-strap">Capital. Visibility. Partners. Market access.</div>
+          <div class="footer-strap-2">Built for projects ready to scale beyond noise.</div>
+
+          <div class="footer-social" aria-label="Social channels">
+            <a href="#" aria-label="X / Twitter" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a href="#" aria-label="Telegram" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+            <a href="mailto:mail@lead-volume.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Explore -->
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="index.html">Accelerator</a></li>
+            <li><a href="market-rails.html">Market Rails</a></li>
+            <li><a href="for-founders.html">For Founders</a></li>
+            <li><a href="investors.html">Investors &amp; Partners</a></li>
+            <li><a href="ai-tech-tracks.html">AI Tech Tracks</a></li>
+          </ul>
+        </div>
+
+        <!-- Ecosystem -->
+        <div class="footer-col">
+          <h5>Ecosystem</h5>
+          <ul>
+            <li><a href="mentors-advisors.html">Mentors &amp; Advisors</a></li>
+            <li><a href="media-events.html">Media &amp; Events</a></li>
+            <li><a href="demo-day.html">Demo Day</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="upcoming-cohort.html">Upcoming Cohort</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="insights.html#market-readiness-thesis">Market Readiness Thesis</a></li>
+            <li><a href="insights.html#ai-web3-thesis">AI &times; Web3 Thesis</a></li>
+            <li><a href="resources.html">Founder Resources</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+          </ul>
+        </div>
+
+        <!-- Apply -->
+        <div class="footer-col">
+          <h5>Apply</h5>
+          <ul>
+            <li><a href="apply.html#founder">Apply as a Founder</a></li>
+            <li><a href="apply.html#partners">Join Investor Network</a></li>
+            <li><a href="apply.html#partners">Become a Partner</a></li>
+            <li><a href="apply.html#refer">Refer a Project</a></li>
+            <li><a href="book-intro-call.html">Book an Intro Call</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Risk note -->
+  <div class="wrap">
+    <div class="footer-risk">
+      BWiGA Accelerator does not provide financial, investment, legal, tax or regulatory advice. Nothing on this website guarantees acceptance, investment, fundraising, partnership, media access, event participation, listing, liquidity, returns or any specific outcome. All participation, investment and partnership decisions remain the sole responsibility of each participant. Technology partners — including INFI MultiChain (a fully decentralized ecosystem) — may support selected projects where relevant; they do not operate the accelerator.
+    </div>
+  </div>
+
+  <!-- 4. Legal bar -->
+  <div class="wrap">
+    <div class="footer-legal">
+      <div class="footer-legal-links">
+        <a href="legal-disclaimer.html">Legal Disclaimer</a>
+        <a href="risk-disclaimer.html">Risk Disclaimer</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-copyright">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>© 2026 BWiGA. BWiGA Accelerator. All rights reserved.</span>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

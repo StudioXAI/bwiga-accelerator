@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" role="img" aria-label="BWiGA Accelerator">
+  <title>BWiGA Accelerator</title>
+  <defs>
+    <!-- Blue → cyan → green stroke gradient (matches BWiGA wordmark) -->
+    <linearGradient id="bw-stroke" x1="20%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e63ff"/>
+      <stop offset="50%"  stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#10e599"/>
+    </linearGradient>
+    <linearGradient id="bw-fill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e63ff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#10e599" stop-opacity="0.06"/>
+    </linearGradient>
+    <!-- Soft outer glow -->
+    <filter id="bw-glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="2.6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- The "B" mark — left vertical stem + two stacked rounded lobes -->
+  <!-- All on transparent background. Stroke + subtle fill. -->
+  <g filter="url(#bw-glow)">
+    <!-- Vertical stem of the B -->
+    <rect x="60" y="48" width="22" height="160"
+          rx="4" ry="4"
+          fill="url(#bw-fill)"
+          stroke="url(#bw-stroke)" stroke-width="4"
+          stroke-linejoin="round"/>
+
+    <!-- Top lobe of the B (D-shape) -->
+    <path d="M 82 48 H 138 A 56 56 0 0 1 138 128 H 82 Z"
+          fill="url(#bw-fill)"
+          stroke="url(#bw-stroke)" stroke-width="4"
+          stroke-linejoin="round" stroke-linecap="round"/>
+
+    <!-- Bottom lobe of the B (D-shape) -->
+    <path d="M 82 128 H 144 A 56 56 0 0 1 144 208 H 82 Z"
+          fill="url(#bw-fill)"
+          stroke="url(#bw-stroke)" stroke-width="4"
+          stroke-linejoin="round" stroke-linecap="round"/>
+
+    <!-- 4-point sparkle / star, centered between the two lobes -->
+    <path d="M 138 92
+             L 144 124
+             L 176 130
+             L 144 136
+             L 138 168
+             L 132 136
+             L 100 130
+             L 132 124 Z"
+          fill="url(#bw-fill)"
+          stroke="url(#bw-stroke)" stroke-width="3.2"
+          stroke-linejoin="round"/>
+  </g>
+</svg>

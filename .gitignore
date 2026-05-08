@@ -1,0 +1,23 @@
+# Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Build artefacts
+__pycache__/
+*.pyc
+.cache/
+
+# Vercel
+.vercel/
+
+# Local env (NEVER commit)
+.env
+.env.local
+.env.*.local
+
+# OS
+Thumbs.db
+
+# Node (in case anyone npm installs in /api)
+node_modules/

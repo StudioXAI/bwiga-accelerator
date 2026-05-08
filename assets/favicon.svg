@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="fg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e63ff"/>
+      <stop offset="50%"  stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#10e599"/>
+    </linearGradient>
+  </defs>
+  <!-- Stem -->
+  <rect x="6" y="5" width="3" height="22" rx="0.5" fill="url(#fg)"/>
+  <!-- Top lobe -->
+  <path d="M 9 5 H 17 A 7 7 0 0 1 17 16 H 9 Z" fill="url(#fg)"/>
+  <!-- Bottom lobe -->
+  <path d="M 9 16 H 18 A 7 7 0 0 1 18 27 H 9 Z" fill="url(#fg)"/>
+  <!-- Sparkle (small for legibility at 16px) -->
+  <path d="M 17 11 L 18 15 L 22 16 L 18 17 L 17 21 L 16 17 L 12 16 L 16 15 Z" fill="#0a0a14"/>
+</svg>
