@@ -366,16 +366,22 @@
         Built for founders operating at the intersection of AI, Web3, fintech, RWA, DePIN and next-generation market infrastructure, BWiGA Accelerator combines strategic advisory, launch preparation, investor readiness, event visibility and INFI MultiChain technology partner rails into one structured path.
       </p>
 
-      <!-- Hero video — YouTube embed -->
-      <div class="video-frame">
-        <iframe
-          src="https://www.youtube.com/embed/lYH-xv6glKM?start=4&amp;rel=0&amp;modestbranding=1&amp;playsinline=1"
-          title="BWiGA Accelerator"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
-      </div>
+      <!-- Hero video — click-to-play poster, opens in theater mode -->
+      <button type="button" class="video-poster" id="hero-video-poster"
+              aria-label="Play BWiGA Accelerator video"
+              data-video-id="lYH-xv6glKM"
+              data-video-start="4">
+        <img src="https://img.youtube.com/vi/lYH-xv6glKM/maxresdefault.jpg"
+             alt="" class="video-poster-img" loading="lazy" />
+        <div class="video-poster-overlay">
+          <span class="video-poster-play" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </span>
+          <span class="video-poster-cta">Watch the BWiGA Accelerator story</span>
+        </div>
+      </button>
 
       <div class="cta-row">
         <a href="apply.html" class="btn btn-primary">
@@ -1228,6 +1234,110 @@
   </div>
 
 </footer>
+
+<!-- ===== Video theater overlay (hero video click-to-expand) ===== -->
+<div class="video-theater" id="video-theater" hidden role="dialog" aria-modal="true" aria-label="BWiGA Accelerator video">
+  <div class="video-theater-backdrop" data-close="true"></div>
+  <button type="button" class="video-theater-close" id="video-theater-close" aria-label="Close video (Esc)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 6L6 18M6 6l12 12"/>
+    </svg>
+  </button>
+  <div class="video-theater-stage">
+    <div class="video-theater-frame" id="video-theater-frame">
+      <!-- iframe is injected here on open, destroyed on close -->
+    </div>
+  </div>
+  <div class="video-theater-hint" aria-live="polite">
+    Press <kbd>Esc</kbd> to close
+  </div>
+</div>
+
+<script>
+/* =============================================================================
+   Hero video — click-to-expand theater mode.
+   - Click poster → spawn iframe with autoplay, fade up overlay, lock scroll.
+   - Close on: Esc key, close button, click on backdrop.
+   - Closing destroys the iframe so the video actually stops (YouTube embeds
+     keep playing audio if you just hide them).
+   ============================================================================= */
+(function () {
+  'use strict';
+  const poster   = document.getElementById('hero-video-poster');
+  const theater  = document.getElementById('video-theater');
+  const frame    = document.getElementById('video-theater-frame');
+  const closeBtn = document.getElementById('video-theater-close');
+  if (!poster || !theater || !frame || !closeBtn) return;
+
+  let scrollY = 0;
+  let isOpen = false;
+
+  function buildIframe(videoId, start) {
+    const iframe = document.createElement('iframe');
+    const params = new URLSearchParams({
+      autoplay:       '1',
+      start:          String(start || 0),
+      rel:            '0',
+      modestbranding: '1',
+      playsinline:    '1',
+    });
+    iframe.src = `https://www.youtube.com/embed/${videoId}?${params}`;
+    iframe.title = 'BWiGA Accelerator';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    iframe.allowFullscreen = true;
+    return iframe;
+  }
+
+  function openTheater() {
+    if (isOpen) return;
+    const videoId = poster.dataset.videoId;
+    const start   = poster.dataset.videoStart || 0;
+
+    // Inject iframe (causes the actual YT load + autoplay)
+    frame.appendChild(buildIframe(videoId, start));
+
+    // Lock body scroll without jumping the page
+    scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top      = `-${scrollY}px`;
+    document.body.style.width    = '100%';
+
+    theater.hidden = false;
+    // Force a reflow before adding the open class so the transition runs
+    void theater.offsetWidth;
+    theater.classList.add('is-open');
+    closeBtn.focus();
+    isOpen = true;
+  }
+
+  function closeTheater() {
+    if (!isOpen) return;
+    theater.classList.remove('is-open');
+
+    // Wait for fade-out, then unmount iframe + restore scroll
+    setTimeout(() => {
+      theater.hidden = true;
+      while (frame.firstChild) frame.removeChild(frame.firstChild);
+      document.body.style.position = '';
+      document.body.style.top      = '';
+      document.body.style.width    = '';
+      window.scrollTo(0, scrollY);
+      poster.focus({ preventScroll: true });
+    }, 280);
+    isOpen = false;
+  }
+
+  poster.addEventListener('click', openTheater);
+  closeBtn.addEventListener('click', closeTheater);
+  theater.addEventListener('click', e => {
+    if (e.target.dataset && e.target.dataset.close === 'true') closeTheater();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && isOpen) closeTheater();
+  });
+})();
+</script>
 
 <script src="script.js"></script>
 <script src="chat.js"></script>
