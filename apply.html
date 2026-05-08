@@ -812,10 +812,27 @@
   // Initial state — respect URL hash, else default to founder
   showSection(window.location.hash || '#founder');
 
-  // Tab clicks: update hash; showSection runs on hashchange below
+  // Tab clicks: handle the section switch directly (don't rely solely on
+  // hashchange — other scripts on the page may preventDefault on anchors).
+  // We still want the hash to update so links are shareable, but we also
+  // want the UI to react instantly even if hashchange doesn't fire.
   tabs.forEach(t => t.addEventListener('click', e => {
-    // Native anchor click already updates location.hash, just scroll smoothly
-    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 30);
+    const targetHash = t.getAttribute('href');
+    if (targetHash && VALID_HASHES.includes(targetHash)) {
+      e.preventDefault();
+      // Update hash without triggering scroll-jump (use replaceState so
+      // tab clicks don't fill the back-button history with steps).
+      if (window.location.hash !== targetHash) {
+        history.replaceState(null, '', targetHash);
+      }
+      showSection(targetHash);
+      // Smooth scroll the apply wrap into view so the user sees the form
+      const wrap = document.querySelector('.apply-wrap');
+      if (wrap) {
+        const top = wrap.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    }
   }));
   window.addEventListener('hashchange', () => showSection(window.location.hash));
 

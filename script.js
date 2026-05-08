@@ -348,8 +348,23 @@
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
       if (href === '#' || href === '#top') return;
+
+      // Skip links that have their own tab/section logic (apply page tabs,
+      // any element marked role="tab" or with a data-tab attribute).
+      // Letting these pass through allows the URL hash to update so their
+      // own hashchange listeners can fire.
+      if (link.getAttribute('role') === 'tab') return;
+      if (link.dataset && link.dataset.tab) return;
+      if (link.classList.contains('apply-tab')) return;
+
       const target = document.querySelector(href);
       if (!target) return;
+
+      // If target is hidden (e.g. a tab panel that's not currently active),
+      // don't try to scroll to it — let the click pass through so other
+      // logic can reveal it via hashchange.
+      if (target.hasAttribute('hidden')) return;
+
       e.preventDefault();
       const offset = 80; // header height
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
