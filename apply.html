@@ -303,9 +303,7 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="logo" aria-label="BWiGA Accelerator home">
-      <span class="logo-mark"><img src="assets/logo.png" alt="BWiGA Accelerator" /></span>
-      <span class="logo-text">BWiGA</span>
-      <span class="logo-suffix">Accelerator</span>
+      <img src="assets/logo-wordmark.png" alt="BWiGA Accelerator" class="logo-wordmark-img" />
     </a>
 
     <nav class="main-nav" aria-label="Primary">
@@ -612,6 +610,7 @@
       <div id="founder-error" class="apply-error" hidden>
         <h3>Submission failed</h3>
         <p>We couldn't send your application right now. Please try again, or email <a href="mailto:mail@lead-volume.com">mail@lead-volume.com</a> directly.</p>
+        <p class="error-detail-wrap"><small class="error-detail" style="color: var(--text-muted); font-family: var(--font-mono); font-size: 12px; line-height: 1.5;"></small></p>
       </div>
     </section>
 
@@ -749,6 +748,7 @@
       <div id="partner-error" class="apply-error" hidden>
         <h3>Submission failed</h3>
         <p>We couldn't send your request right now. Please try again, or email <a href="mailto:mail@lead-volume.com">mail@lead-volume.com</a> directly.</p>
+        <p class="error-detail-wrap"><small class="error-detail" style="color: var(--text-muted); font-family: var(--font-mono); font-size: 12px; line-height: 1.5;"></small></p>
       </div>
     </section>
 
@@ -871,9 +871,23 @@
           body: JSON.stringify(payload),
         });
 
+        // Try to read JSON response body — gives us the server's error message
+        let bodyJson = null;
+        let bodyText = '';
+        try {
+          bodyText = await res.text();
+          bodyJson = bodyText ? JSON.parse(bodyText) : null;
+        } catch (parseErr) {
+          // Response wasn't JSON — likely a 404 HTML page or runtime crash
+          bodyJson = null;
+        }
+
         if (!res.ok) {
-          const errBody = await res.text().catch(() => '');
-          throw new Error('HTTP ' + res.status + ' ' + errBody.slice(0, 200));
+          const serverMsg = (bodyJson && (bodyJson.error || bodyJson.message))
+            || (res.status === 404 ? 'API endpoint not found. The /api/apply-* function may not be deployed.' : '')
+            || ('HTTP ' + res.status);
+          const debugInfo = bodyJson && bodyJson.debug ? ' [' + bodyJson.debug + ']' : '';
+          throw new Error(serverMsg + debugInfo);
         }
 
         // Success — hide form, show success block, reset state
@@ -886,6 +900,12 @@
       } catch (err) {
         console.error('Submission failed:', err);
         if (errorEl) {
+          // Replace the default error text with the actual server message,
+          // so the user (and you when debugging) can see what went wrong.
+          const detailEl = errorEl.querySelector('.error-detail');
+          if (detailEl) {
+            detailEl.textContent = String(err.message || err);
+          }
           errorEl.hidden = false;
           errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
@@ -942,10 +962,8 @@
         <!-- Brand block -->
         <div class="footer-brand">
           <a href="index.html" class="logo" aria-label="BWiGA Accelerator home">
-            <span class="logo-mark"><img src="assets/logo.png" alt="BWiGA Accelerator" /></span>
-            <span class="logo-text">BWiGA</span>
-            <span class="logo-suffix">Accelerator</span>
-          </a>
+      <img src="assets/logo-wordmark.png" alt="BWiGA Accelerator" class="logo-wordmark-img" />
+    </a>
           <p>Premium Web3 &amp; iGaming accelerator ecosystem for founders, investors and industry leaders.</p>
           <div class="footer-strap">Capital. Visibility. Partners. Market access.</div>
           <div class="footer-strap-2">Built for projects ready to scale beyond noise.</div>

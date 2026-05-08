@@ -41,9 +41,7 @@ FOOTER_HTML = '''<!-- ===== Footer (BWiGA spec) ===== -->
         <!-- Brand block -->
         <div class="footer-brand">
           <a href="index.html" class="logo" aria-label="BWiGA Accelerator home">
-            <span class="logo-mark"><img src="assets/logo.png" alt="BWiGA Accelerator" /></span>
-            <span class="logo-text">BWiGA</span>
-            <span class="logo-suffix">Accelerator</span>
+            <img src="assets/logo-wordmark.png" alt="BWiGA Accelerator" class="logo-wordmark-img" />
           </a>
           <p>Premium Web3 &amp; iGaming accelerator ecosystem for founders, investors and industry leaders.</p>
           <div class="footer-strap">Capital. Visibility. Partners. Market access.</div>

@@ -116,10 +116,26 @@ module.exports = async (req, res) => {
   ].join('\n');
 
   try {
-    await sendEmail({ subject, html, text, replyTo: data.email });
+    const result = await sendEmail({ subject, html, text, replyTo: data.email });
+    if (result && result.dryRun) {
+      console.warn('[apply-partner] DRY RUN — RESEND_API_KEY is not set in environment');
+      return res.status(503).json({
+        error: 'Email service not configured. Please set RESEND_API_KEY in Vercel environment variables and redeploy.',
+      });
+    }
+    console.log('[apply-partner] sent successfully', { company: data.company, email: data.email });
     return res.status(200).json({ ok: true });
   } catch (e) {
     console.error('[apply-partner] sendEmail failed:', e.message);
-    return res.status(502).json({ error: 'Email delivery failed. Please try again later.' });
+    const msg = e.message || '';
+    let hint = 'Email delivery failed. Please try again later.';
+    if (msg.includes('domain is not verified') || msg.includes('not allowed') || msg.includes('422')) {
+      hint = 'Sender domain not verified in Resend. In Vercel env vars, set APPLICATION_FROM_EMAIL to use a verified sender (e.g. onboarding@resend.dev) and redeploy.';
+    } else if (msg.includes('401') || msg.includes('Invalid API key')) {
+      hint = 'Resend API key invalid. Regenerate the key in Resend, update RESEND_API_KEY in Vercel, and redeploy.';
+    } else if (msg.includes('403')) {
+      hint = 'Resend rejected the request (403). Check API key permissions and verified domains.';
+    }
+    return res.status(502).json({ error: hint, debug: msg.slice(0, 300) });
   }
 };

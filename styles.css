@@ -238,6 +238,37 @@ h4 { font-size: 16px; font-weight: 600; }
   flex-shrink: 0;
 }
 
+/* ─── Wordmark image — used in every header & footer ─────────────────── */
+.logo-wordmark-img {
+  height: 40px;          /* desktop default */
+  width: auto;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+  /* Soft cyan glow so it reads on slightly-translucent header backgrounds */
+  filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.25));
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.logo:hover .logo-wordmark-img {
+  filter: drop-shadow(0 0 12px rgba(34, 211, 238, 0.5));
+  transform: translateY(-1px);
+}
+/* Footer brand block uses a slightly larger version for presence */
+.footer-brand .logo-wordmark-img { height: 44px; margin-bottom: 8px; }
+/* Footer top CTA bar — small */
+.footer-cta-mark .logo-wordmark-img { height: 32px; width: auto; }
+
+@media (max-width: 768px) {
+  .logo-wordmark-img { height: 32px; }
+  .footer-brand .logo-wordmark-img { height: 38px; }
+}
+@media (max-width: 480px) {
+  .logo-wordmark-img { height: 28px; }
+}
+
+/* ─── Legacy logo-mark / logo-text / logo-suffix kept for the chat widget,
+       which still renders the B-only mark inside a circular avatar. They
+       are no longer used on header/footer logos. ─── */
 .logo-mark {
   width: 38px;
   height: 38px;
@@ -2284,7 +2315,11 @@ button, .btn, .apply-btn, .mega-link, .faq-question, .faq-tab, .logo, .nav-link,
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #0a0c12 0%, #131620 100%);
+  /* Deep navy core gives the neon-stroke BWiGA logo maximum contrast */
+  background:
+    radial-gradient(circle at 30% 25%, rgba(34, 211, 238, 0.18) 0%, transparent 55%),
+    radial-gradient(circle at 70% 80%, rgba(16, 229, 153, 0.14) 0%, transparent 55%),
+    linear-gradient(135deg, #050a1a 0%, #0a1428 50%, #050a1a 100%);
   border: 2px solid transparent;
   background-clip: padding-box;
   display: flex;
@@ -2292,21 +2327,21 @@ button, .btn, .apply-btn, .mega-link, .faq-question, .faq-tab, .logo, .nav-link,
   justify-content: center;
   cursor: pointer;
   box-shadow:
-    0 8px 28px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(212, 175, 55, 0.4),
-    0 0 60px rgba(34, 211, 238, 0.18);
+    0 8px 28px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(34, 211, 238, 0.45),
+    0 0 60px rgba(30, 99, 255, 0.22);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   isolation: isolate;
 }
 
 .chat-fab::after {
-  /* Gradient ring */
+  /* Gradient ring — BWiGA blue → cyan → green */
   content: '';
   position: absolute;
   inset: -2px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--gold), var(--cyan), var(--emerald));
+  background: linear-gradient(135deg, #1e63ff 0%, #22d3ee 50%, #10e599 100%);
   z-index: -1;
 }
 
@@ -2325,7 +2360,11 @@ button, .btn, .apply-btn, .mega-link, .faq-question, .faq-tab, .logo, .nav-link,
   object-fit: contain;
   display: block;
   transition: transform 0.4s cubic-bezier(0.34, 1.5, 0.64, 1), opacity 0.25s;
-  filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.4));
+  /* Stronger glow makes the thin BWiGA strokes legible at 36px */
+  filter:
+    drop-shadow(0 0 4px rgba(34, 211, 238, 0.85))
+    drop-shadow(0 0 10px rgba(30, 99, 255, 0.55))
+    drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
 }
 
 .chat-fab-close {
@@ -2333,7 +2372,7 @@ button, .btn, .apply-btn, .mega-link, .faq-question, .faq-tab, .logo, .nav-link,
   inset: 0;
   width: 100%;
   height: 100%;
-  color: var(--gold);
+  color: #22d3ee;
   opacity: 0;
   transform: rotate(-45deg) scale(0.6);
   transition: opacity 0.25s, transform 0.25s;
@@ -2353,28 +2392,32 @@ button, .btn, .apply-btn, .mega-link, .faq-question, .faq-tab, .logo, .nav-link,
   transform: scale(1.06);
   box-shadow:
     0 12px 36px rgba(0, 0, 0, 0.6),
-    0 0 0 1px var(--gold),
-    0 0 80px rgba(212, 175, 55, 0.35);
+    0 0 0 1px #22d3ee,
+    0 0 80px rgba(34, 211, 238, 0.40);
 }
 
 .chat-fab:hover .chat-fab-logo {
   transform: rotate(-12deg) scale(1.08);
+  filter:
+    drop-shadow(0 0 6px rgba(34, 211, 238, 1))
+    drop-shadow(0 0 14px rgba(16, 229, 153, 0.7))
+    drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
 }
 
-/* Pulsing rings */
+/* Pulsing rings — BWiGA cyan/green */
 .chat-fab-pulse, .chat-fab-pulse-2 {
   position: absolute;
   inset: -4px;
   border-radius: 50%;
-  border: 1px solid rgba(212, 175, 55, 0.5);
+  border: 1px solid rgba(34, 211, 238, 0.55);
   animation: chat-fab-pulse-out 2.6s ease-out infinite;
   pointer-events: none;
 }
 .chat-fab-pulse-2 { animation-delay: 1.3s; }
 
 @keyframes chat-fab-pulse-out {
-  0%   { transform: scale(1);    opacity: 0.7; border-color: rgba(212, 175, 55, 0.6); }
-  70%  { transform: scale(1.45); opacity: 0;   border-color: rgba(34, 211, 238, 0.0); }
+  0%   { transform: scale(1);    opacity: 0.7; border-color: rgba(34, 211, 238, 0.6); }
+  70%  { transform: scale(1.45); opacity: 0;   border-color: rgba(16, 229, 153, 0.0); }
   100% { transform: scale(1.45); opacity: 0; }
 }
 
@@ -2468,19 +2511,28 @@ button, .btn, .apply-btn, .mega-link, .faq-question, .faq-tab, .logo, .nav-link,
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(34, 211, 238, 0.15));
-  border: 1px solid var(--border-gold);
+  /* Deep navy core matches FAB and gives the BWiGA neon-stroke logo full contrast */
+  background:
+    radial-gradient(circle at 30% 25%, rgba(34, 211, 238, 0.20) 0%, transparent 60%),
+    radial-gradient(circle at 70% 75%, rgba(16, 229, 153, 0.14) 0%, transparent 60%),
+    linear-gradient(135deg, #050a1a 0%, #0a1428 100%);
+  border: 1px solid rgba(34, 211, 238, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   padding: 5px;
-  box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+  box-shadow:
+    0 0 18px rgba(30, 99, 255, 0.25),
+    inset 0 0 12px rgba(34, 211, 238, 0.08);
 }
 .chat-avatar-logo {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  filter:
+    drop-shadow(0 0 3px rgba(34, 211, 238, 0.85))
+    drop-shadow(0 0 6px rgba(30, 99, 255, 0.5));
 }
 
 .chat-title-text {
@@ -2564,19 +2616,25 @@ button, .btn, .apply-btn, .mega-link, .faq-question, .faq-tab, .logo, .nav-link,
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(34, 211, 238, 0.1));
-  border: 1px solid var(--border-gold);
+  background:
+    radial-gradient(circle at 30% 25%, rgba(34, 211, 238, 0.18) 0%, transparent 60%),
+    linear-gradient(135deg, #050a1a 0%, #0a1428 100%);
+  border: 1px solid rgba(34, 211, 238, 0.30);
   flex-shrink: 0;
   padding: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 2px;
+  box-shadow: 0 0 8px rgba(30, 99, 255, 0.18);
 }
 .chat-msg-avatar img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  filter:
+    drop-shadow(0 0 2px rgba(34, 211, 238, 0.8))
+    drop-shadow(0 0 4px rgba(30, 99, 255, 0.4));
 }
 
 .chat-msg {

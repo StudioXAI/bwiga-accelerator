@@ -250,9 +250,7 @@ def render_page(slug, title, status_label, eyebrow, body, supplementary):
 <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="logo" aria-label="BWiGA Accelerator home">
-      <span class="logo-mark"><img src="assets/logo.png" alt="BWiGA Accelerator" /></span>
-      <span class="logo-text">BWiGA</span>
-      <span class="logo-suffix">Accelerator</span>
+      <img src="assets/logo-wordmark.png" alt="BWiGA Accelerator" class="logo-wordmark-img" />
     </a>
     <nav class="main-nav" aria-label="Primary">
       <a href="index.html" class="nav-link">Accelerator</a>
